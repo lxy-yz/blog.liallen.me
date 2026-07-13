@@ -12,16 +12,7 @@ export default function Home() {
 
   return (
     <main className="home">
-      <section className="hero">
-        <h1>Blog</h1>
-        <p>Observations and thoughts from everyday life.</p>
-      </section>
-
       <section className="post-list-section">
-        <div className="section-heading">
-          <h2>Start Here</h2>
-          <Link href="/posts">All Posts</Link>
-        </div>
         <div className="post-list">
           {startHere.map((post) => (
             <article className="post-card" key={post.id}>

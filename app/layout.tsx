@@ -36,12 +36,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="site-header">
-          <nav>
-            <a href="/">Home</a>
-            <a href="/posts">Posts</a>
+          <h1 className="site-title">Blog</h1>
+          <p>Observations and thoughts from everyday life.</p>
+        </header>
+        <div className="site-tabs">
+          <nav aria-label="Primary navigation">
+            <a href="/">Start Here</a>
+            <a href="/posts">Archives</a>
             <a href="/rss.xml">RSS</a>
           </nav>
-        </header>
+        </div>
         {children}
         <footer className="site-footer">
           <span>Observe first. Understand later.</span>

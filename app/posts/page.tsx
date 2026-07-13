@@ -9,9 +9,7 @@ export const metadata: Metadata = {
 
 export default function PostsPage() {
   return (
-    <main className="archive">
-      <h1>Posts</h1>
-      <p>{posts.length} posts synced from Notion CMS.</p>
+    <main className="archive post-list-section">
       <section className="post-list">
         {posts.map((post) => (
           <article className="post-card" key={post.id}>

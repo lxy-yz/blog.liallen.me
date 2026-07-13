@@ -50,6 +50,7 @@ a {
 }
 
 .site-header,
+.site-tabs,
 .site-footer,
 main {
   margin: 0 auto;
@@ -57,19 +58,51 @@ main {
 }
 
 .site-header {
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px solid var(--line);
   display: flex;
+  flex-direction: column;
   gap: 16px;
-  justify-content: flex-end;
-  padding: 28px 0;
+  justify-content: center;
+  padding: 72px 0 48px;
+}
+
+.site-header p {
+  color: var(--muted);
+  font-size: 1.25rem;
+  margin: 0;
+  max-width: 560px;
+}
+
+.site-tabs {
+  padding: 18px 0 28px;
 }
 
 nav {
+  background: var(--code);
+  border: 1px solid var(--line);
+  border-radius: 8px;
   color: var(--muted);
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
   font-size: 0.95rem;
+  gap: 2px;
+  padding: 3px;
+}
+
+nav a {
+  border-radius: 6px;
+  line-height: 1;
+  padding: 9px 12px;
+  text-decoration: none;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: var(--card);
+  color: var(--foreground);
+  outline: none;
 }
 
 .hero {
@@ -85,6 +118,7 @@ nav {
   color: var(--muted);
 }
 
+.site-title,
 .hero h1,
 .archive h1,
 .post h1 {
@@ -95,10 +129,8 @@ nav {
   margin: 0;
 }
 
-.hero p:last-child {
-  font-size: 1.25rem;
-  margin-top: 24px;
-  max-width: 560px;
+.post-list-section {
+  padding-top: 4px;
 }
 
 .section-heading {
@@ -160,6 +192,10 @@ nav {
 .archive,
 .post {
   padding: 48px 0;
+}
+
+.archive.post-list-section {
+  padding-top: 4px;
 }
 
 .post {
@@ -248,8 +284,7 @@ hr {
 
 @media (max-width: 640px) {
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
+    padding: 48px 0 36px;
   }
 
   .hero {

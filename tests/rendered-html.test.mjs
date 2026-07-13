@@ -40,7 +40,7 @@ test("server-renders posts archive with Notion CMS content", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /93(?:<!-- -->)? posts synced from Notion CMS/);
+  assert.doesNotMatch(html, /posts synced from Notion CMS/);
   assert.match(html, /A life debugger/);
   assert.match(html, /你不控制媒介，媒介将控制你/);
 });
