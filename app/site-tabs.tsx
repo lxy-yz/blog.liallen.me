@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const tabs = [
   { href: "/", label: "Start Here" },
@@ -13,11 +13,11 @@ function isActiveTab(pathname: string, href: string) {
 }
 
 export function SiteTabs() {
-  const [pathname, setPathname] = useState("");
+  const pathname = usePathname() || "";
 
-  useEffect(() => {
-    setPathname(window.location.pathname);
-  }, []);
+  if (pathname.startsWith("/posts/")) {
+    return null;
+  }
 
   return (
     <div className="site-tabs">

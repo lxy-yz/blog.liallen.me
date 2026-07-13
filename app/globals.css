@@ -67,6 +67,12 @@ main {
   padding: 72px 0 48px;
 }
 
+.post-site-header {
+  border-bottom: 0;
+  padding: 24px 0 36px;
+  width: min(760px, calc(100% - 32px));
+}
+
 .site-header p {
   color: var(--muted);
   font-size: 1.25rem;
@@ -85,6 +91,24 @@ main {
 .rss-link {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.back-link {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 10px 13px;
+  text-decoration: none;
+  transition: border-color 150ms ease, color 150ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  border-color: var(--accent);
+  color: var(--foreground);
+  outline: none;
 }
 
 nav {
@@ -310,6 +334,9 @@ hr {
 
 .site-footer {
   border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   padding: 32px 0 48px;
 }
 

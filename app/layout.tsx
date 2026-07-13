@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteHeader } from "./site-header";
 import { SiteTabs } from "./site-tabs";
 import "./globals.css";
 
@@ -39,14 +40,12 @@ export default function RootLayout({
             `,
           }}
         />
-        <header className="site-header">
-          <h1 className="site-title">Blog</h1>
-          <p>Observations and thoughts from everyday life.</p>
-        </header>
+        <SiteHeader />
         <SiteTabs />
         {children}
         <footer className="site-footer">
           <span>Observe first. Understand later.</span>
+          <span>Copyright © 2026. All rights reserved.</span>
         </footer>
       </body>
     </html>
