@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { SiteTabs } from "./site-tabs";
 import "./globals.css";
 
+const gaMeasurementId = "G-8EV4KNV3LN";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -36,6 +38,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag("js", new Date());
+              gtag("config", "${gaMeasurementId}");
+            `,
+          }}
+        />
         <header className="site-header">
           <h1 className="site-title">Blog</h1>
           <p>Observations and thoughts from everyday life.</p>

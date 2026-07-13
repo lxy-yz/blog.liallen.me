@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -31,6 +32,8 @@ test("server-renders migrated blog home", async () => {
   assert.match(html, /<title>Blog \| Blog<\/title>/i);
   assert.match(html, /Observations and thoughts from everyday life\./);
   assert.doesNotMatch(html, /Observe first\.<\/p><h1>Understand later\./);
+  assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-8EV4KNV3LN/);
+  assert.match(html, /gtag\("config", "G-8EV4KNV3LN"\)/);
   assert.match(html, /Who stole my pace\?/);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is working/);
 });
@@ -71,4 +74,16 @@ test("preserves Notion soft line breaks inside paragraphs", async () => {
   const html = await response.text();
   assert.match(html, /You’re in a long-distance race\.<br>There is no map\./);
   assert.match(html, /For a while, your breathing settles\.<br>Your shoulders drop\.<br>Your feet find the ground\./);
+});
+
+test("exports Vercel static pages with analytics", async () => {
+  const html = await readFile(new URL("../vercel-dist/index.html", import.meta.url), "utf8");
+  const postHtml = await readFile(
+    new URL("../vercel-dist/posts/who-stole-my-pace-86567ee3/index.html", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-8EV4KNV3LN/);
+  assert.match(html, /gtag\("config", "G-8EV4KNV3LN"\)/);
+  assert.match(postHtml, /Who stole my pace\?/);
 });
