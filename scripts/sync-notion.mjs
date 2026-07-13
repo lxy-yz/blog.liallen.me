@@ -1,9 +1,16 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { execFile } from "node:child_process";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { promisify } from "node:util";
 
 const root = process.cwd();
 const outFile = path.join(root, "data/notion-cms.json");
 const legacyFile = path.join(root, "data/notion-collection.json");
+const assetRoot = path.join(root, "public", "notion-assets");
+const assetUrlPrefix = "/notion-assets";
+const assetCache = new Map();
+const execFileAsync = promisify(execFile);
 
 await loadLocalEnv(path.join(root, ".env.local"));
 
@@ -42,6 +49,131 @@ function escapeHtml(value = "") {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function sanitizeFilePart(value = "") {
+  return (
+    value
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9._-]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80) || "image"
+  );
+}
+
+function extensionFromContentType(contentType = "") {
+  const type = contentType.split(";")[0]?.trim().toLowerCase();
+  if (type === "image/jpeg") return ".jpg";
+  if (type === "image/png") return ".png";
+  if (type === "image/webp") return ".webp";
+  if (type === "image/gif") return ".gif";
+  if (type === "image/svg+xml") return ".svg";
+  if (type === "image/heic") return ".heic";
+  if (type === "image/heif") return ".heif";
+  return "";
+}
+
+function extensionFromUrl(url) {
+  const ext = path.extname(url.pathname).toLowerCase();
+  return /^[a-z0-9.]{2,8}$/.test(ext) ? ext : "";
+}
+
+function isLocalAssetUrl(value = "") {
+  return value.startsWith(`${assetUrlPrefix}/`);
+}
+
+function isRemoteNotionAsset(value = "") {
+  try {
+    const url = new URL(value);
+    return (
+      url.protocol === "https:" &&
+      (url.hostname === "prod-files-secure.s3.us-west-2.amazonaws.com" ||
+        (url.hostname.endsWith(".amazonaws.com") && url.searchParams.has("X-Amz-Signature")))
+    );
+  } catch {
+    return false;
+  }
+}
+
+function stableAssetKey(value) {
+  const url = new URL(value);
+  return `${url.origin}${url.pathname}`;
+}
+
+async function localizeImageUrl(value, postSlug, index = 0) {
+  if (!value || isLocalAssetUrl(value) || !isRemoteNotionAsset(value)) return value;
+
+  const stableKey = stableAssetKey(value);
+  const cacheKey = `${postSlug}:${stableKey}`;
+  const cached = assetCache.get(cacheKey);
+  if (cached) return cached;
+
+  const sourceUrl = new URL(value);
+  const response = await fetch(value);
+  if (!response.ok) {
+    throw new Error(`Failed to download Notion image ${sourceUrl.pathname}: HTTP ${response.status}`);
+  }
+
+  const contentType = response.headers.get("content-type") || "";
+  const ext = extensionFromUrl(sourceUrl) || extensionFromContentType(contentType) || ".bin";
+  const hash = createHash("sha256").update(stableKey).digest("hex").slice(0, 16);
+  const baseName = sanitizeFilePart(path.basename(sourceUrl.pathname, path.extname(sourceUrl.pathname)));
+  const postDir = sanitizeFilePart(postSlug || "post");
+  const fileStem = `${String(index + 1).padStart(2, "0")}-${hash}-${baseName}`;
+  const fileName = `${fileStem}${ext}`;
+  let relativePath = path.posix.join("notion-assets", postDir, fileName);
+  const outputFile = path.join(assetRoot, postDir, fileName);
+
+  await mkdir(path.dirname(outputFile), { recursive: true });
+  await writeFile(outputFile, Buffer.from(await response.arrayBuffer()));
+
+  if (ext === ".heic" || ext === ".heif") {
+    const jpegFileName = `${fileStem}.jpg`;
+    const jpegOutputFile = path.join(assetRoot, postDir, jpegFileName);
+    try {
+      await execFileAsync("sips", ["-s", "format", "jpeg", outputFile, "--out", jpegOutputFile]);
+      await rm(outputFile);
+      relativePath = path.posix.join("notion-assets", postDir, jpegFileName);
+    } catch {
+      // Keep the original HEIC when the local platform cannot convert it.
+    }
+  }
+
+  const localized = `/${relativePath}`;
+  assetCache.set(cacheKey, localized);
+  return localized;
+}
+
+async function localizeMarkdownImages(markdown = "", postSlug = "post") {
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  let imageIndex = 0;
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const image = lines[i].trim().match(/^(!\[.*\]\()(https?:\/\/.*)(\).*)$/);
+    if (!image) continue;
+
+    const localized = await localizeImageUrl(image[2], postSlug, imageIndex);
+    imageIndex += 1;
+    lines[i] = `${image[1]}${localized}${image[3]}`;
+  }
+
+  return lines.join("\n");
+}
+
+async function localizeHtmlImageSources(html = "", postSlug = "post") {
+  const imageTags = [...html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"[^>]*>/gi)];
+  let localizedHtml = html;
+
+  for (let i = 0; i < imageTags.length; i += 1) {
+    const [tag, src] = imageTags[i];
+    const localized = await localizeImageUrl(src.replaceAll("&amp;", "&"), postSlug, i);
+    if (localized === src) continue;
+    localizedHtml = localizedHtml.replace(tag, tag.replace(src, escapeHtml(localized)));
+  }
+
+  return localizedHtml;
 }
 
 function slugify(title) {
@@ -388,7 +520,7 @@ function markdownToHtml(markdown = "", postById = new Map()) {
       continue;
     }
 
-    const image = line.trim().match(/^!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/);
+    const image = line.trim().match(/^!\[(.*)\]\(((?:https?:\/\/|\/).*)\)$/);
     if (image) {
       flushParagraph();
       html.push(`<figure><img src="${escapeHtml(image[2])}" alt="${escapeHtml(image[1])}" loading="lazy"></figure>`);
@@ -440,11 +572,12 @@ async function syncFromNotion() {
     const title = propertyText(page.properties, "Name").trim();
     if (!title) continue;
 
-    const markdown = await getMarkdown(page.id);
+    const slug = slugify(title, page.id);
+    const markdown = await localizeMarkdownImages(await getMarkdown(page.id), slug);
     rawPosts.push({
       id: page.id,
       title,
-      slug: slugify(title, page.id),
+      slug,
       date: propertyDate(page.properties, "Published"),
       tags: propertyTags(page.properties, "Tags"),
       description: propertyText(page.properties, "Description").trim(),
@@ -558,7 +691,7 @@ async function syncFromLegacyCache() {
       .filter(([, block]) => block),
   );
   const resultIds = source.result.reducerResults.collection_group_results.blockIds;
-  const posts = resultIds
+  const rawPosts = resultIds
     .map((id) => blocks.get(id))
     .filter((block) => block?.type === "page")
     .map((block) => {
@@ -576,6 +709,14 @@ async function syncFromLegacyCache() {
     })
     .filter((post) => post.title);
 
+  const posts = [];
+  for (const post of rawPosts) {
+    posts.push({
+      ...post,
+      html: await localizeHtmlImageSources(post.html, post.slug),
+    });
+  }
+
   return {
     generatedAt: new Date().toISOString(),
     source: {
@@ -589,7 +730,14 @@ async function syncFromLegacyCache() {
 let cms;
 let shouldWrite = true;
 if (config.token) {
-  cms = await syncFromNotion();
+  try {
+    cms = await syncFromNotion();
+  } catch (error) {
+    if (!config.optional) throw error;
+    cms = JSON.parse(await readFile(outFile, "utf8"));
+    shouldWrite = false;
+    console.warn(`Notion sync failed in optional mode; using cached CMS data. ${error.message}`);
+  }
 } else if (config.optional) {
   try {
     cms = JSON.parse(await readFile(outFile, "utf8"));

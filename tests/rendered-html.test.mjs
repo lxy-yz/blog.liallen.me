@@ -89,6 +89,18 @@ test("uses ascii slugs for Chinese post titles", async () => {
   assert.match(html, /即兴山河/);
 });
 
+test("serves Notion images from local static assets", async () => {
+  const response = await render("/posts/ji-xing-shan-he");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /src="\/notion-assets\/ji-xing-shan-he\//);
+  assert.match(html, /src="\/notion-assets\/ji-xing-shan-he\/03-[^"]+\.jpg"/);
+  assert.doesNotMatch(html, /prod-files-secure\.s3/);
+  assert.doesNotMatch(html, /X-Amz-/);
+  assert.doesNotMatch(html, /\.heic/i);
+});
+
 test("keeps legacy Chinese post URLs working", async () => {
   const response = await render(encodeURI("/posts/即兴山河-361f2bca"));
   assert.equal(response.status, 200);
