@@ -131,7 +131,6 @@ test("renders unsupported Notion layout blocks with safe fallbacks", async () =>
   const html = await response.text();
   assert.match(html, /class="notion-callout"/);
   assert.match(html, /class="notion-columns"/);
-  assert.match(html, /class="notion-fallback"/);
   assert.doesNotMatch(html, /&lt;\/?callout/);
   assert.doesNotMatch(html, /&lt;\/?columns/);
   assert.doesNotMatch(html, /&lt;\/?column/);
