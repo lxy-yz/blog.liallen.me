@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPost, posts, renderPostHtml } from "../../lib/blog";
+import { GiscusComments } from "./comments";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -43,25 +43,12 @@ function Comments() {
   }
 
   return (
-    <section className="comments">
-      <h2>Comments</h2>
-      <script
-        src="https://giscus.app/client.js"
-        data-repo={repo}
-        data-repo-id={repoId}
-        data-category={category}
-        data-category-id={categoryId}
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossOrigin="anonymous"
-        async
-      />
-    </section>
+    <GiscusComments
+      repo={repo}
+      repoId={repoId}
+      category={category}
+      categoryId={categoryId}
+    />
   );
 }
 
@@ -74,20 +61,19 @@ export default async function PostPage({ params }: PageProps) {
   return (
     <main className="post">
       <article>
-        <Link className="back" href="/posts">
-          Posts
-        </Link>
         <header className="post-header">
-          <p className="date">{post.date}</p>
+          <div className="post-meta">
+            <span className="date">{post.date}</span>
+            {post.tags.length ? (
+              <div className="tags">
+                {post.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            ) : null}
+          </div>
           <h1>{post.title}</h1>
           {post.description ? <p>{post.description}</p> : null}
-          {post.tags.length ? (
-            <div className="tags">
-              {post.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
-            </div>
-          ) : null}
         </header>
         <div
           className="content"

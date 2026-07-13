@@ -52,8 +52,7 @@ test("server-renders a post with giscus comments", async () => {
   const html = await response.text();
   assert.match(html, /A life debugger/);
   assert.match(html, /Comments/);
-  assert.match(html, /https:\/\/giscus\.app\/client\.js/);
-  assert.match(html, /lxy-yz\/blog\.liallen\.me/);
+  assert.match(html, /data-giscus-repo="lxy-yz\/blog\.liallen\.me"/);
   assert.doesNotMatch(html, /Set <code>GISCUS_REPO<\/code>/);
 });
 
@@ -63,4 +62,13 @@ test("does not render Notion empty block placeholders", async () => {
 
   const html = await response.text();
   assert.doesNotMatch(html, /empty-block/);
+});
+
+test("preserves Notion soft line breaks inside paragraphs", async () => {
+  const response = await render("/posts/who-stole-my-pace-86567ee3");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /You’re in a long-distance race\.<br>There is no map\./);
+  assert.match(html, /For a while, your breathing settles\.<br>Your shoulders drop\.<br>Your feet find the ground\./);
 });

@@ -146,7 +146,7 @@ function markdownToHtml(markdown = "") {
 
   function flushParagraph() {
     if (!paragraph.length) return;
-    html.push(`<p>${inlineMarkdown(paragraph.join(" "))}</p>`);
+    html.push(`<p>${paragraph.map((line) => inlineMarkdown(line)).join("<br>")}</p>`);
     paragraph = [];
   }
 

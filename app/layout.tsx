@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SiteTabs } from "./site-tabs";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,13 +40,7 @@ export default function RootLayout({
           <h1 className="site-title">Blog</h1>
           <p>Observations and thoughts from everyday life.</p>
         </header>
-        <div className="site-tabs">
-          <nav aria-label="Primary navigation">
-            <a href="/">Start Here</a>
-            <a href="/posts">Archives</a>
-            <a href="/rss.xml">RSS</a>
-          </nav>
-        </div>
+        <SiteTabs />
         {children}
         <footer className="site-footer">
           <span>Observe first. Understand later.</span>
