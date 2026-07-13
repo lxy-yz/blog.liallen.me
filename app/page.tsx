@@ -7,8 +7,19 @@ export const metadata: Metadata = {
   description: "Observations and thoughts from everyday life.",
 };
 
+const startHereTitles = [
+  "Who stole my pace?",
+  "5 kilometers",
+  "山路夜骑",
+  "Why I left the US",
+  "好久不见",
+  "即兴山河",
+];
+
 export default function Home() {
-  const startHere = posts.slice(0, 6);
+  const startHere = startHereTitles
+    .map((title) => posts.find((post) => post.title === title))
+    .filter((post) => post !== undefined);
 
   return (
     <main className="home">

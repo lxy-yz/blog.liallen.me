@@ -11,8 +11,8 @@ export function generateStaticParams() {
   return posts.flatMap((post) => {
     const params = [{ slug: post.slug }];
 
-    if (post.legacySlug && post.legacySlug !== post.slug) {
-      params.push({ slug: post.legacySlug });
+    for (const legacySlug of post.legacySlugs || []) {
+      params.push({ slug: legacySlug });
     }
 
     return params;

@@ -45,11 +45,107 @@ function escapeHtml(value = "") {
 }
 
 function slugify(title) {
-  const base = title
+  const pinyin = {
+    不: "bu",
+    个: "ge",
+    久: "jiu",
+    么: "me",
+    习: "xi",
+    了: "le",
+    介: "jie",
+    何: "he",
+    你: "ni",
+    信: "xin",
+    入: "ru",
+    兴: "xing",
+    别: "bie",
+    制: "zhi",
+    动: "dong",
+    医: "yi",
+    卖: "mai",
+    即: "ji",
+    变: "bian",
+    后: "hou",
+    告: "gao",
+    命: "ming",
+    四: "si",
+    回: "hui",
+    境: "jing",
+    夜: "ye",
+    太: "tai",
+    失: "shi",
+    奇: "qi",
+    好: "hao",
+    如: "ru",
+    媒: "mei",
+    子: "zi",
+    季: "ji",
+    寻: "xun",
+    将: "jiang",
+    小: "xiao",
+    山: "shan",
+    巷: "xiang",
+    市: "shi",
+    年: "nian",
+    廊: "lang",
+    忙: "mang",
+    怎: "zen",
+    息: "xi",
+    惯: "guan",
+    感: "gan",
+    手: "shou",
+    抱: "bao",
+    拥: "yong",
+    控: "kong",
+    摆: "bai",
+    改: "gai",
+    无: "wu",
+    机: "ji",
+    束: "shu",
+    来: "lai",
+    样: "yang",
+    根: "gen",
+    河: "he",
+    消: "xiao",
+    游: "you",
+    焦: "jiao",
+    玩: "wan",
+    生: "sheng",
+    由: "you",
+    的: "de",
+    笑: "xiao",
+    笼: "long",
+    粥: "zhou",
+    缚: "fu",
+    胖: "pang",
+    脱: "tuo",
+    自: "zi",
+    蒙: "meng",
+    虑: "lv",
+    见: "jian",
+    觉: "jue",
+    记: "ji",
+    贩: "fan",
+    路: "lu",
+    轮: "lun",
+    轻: "qing",
+    运: "yun",
+    那: "na",
+    都: "du",
+    随: "sui",
+    雨: "yu",
+    题: "ti",
+    骑: "qi",
+    鼓: "gu",
+  };
+  const asciiTitle = Array.from(title, (char) =>
+    pinyin[char] ? ` ${pinyin[char]} ` : char,
+  ).join("");
+  const base = asciiTitle
     .toLowerCase()
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, "-")
+    .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 80);
 
@@ -77,6 +173,18 @@ async function notionRequest(endpoint, init = {}) {
 
 function richPlain(rich = []) {
   return rich.map((item) => item.plain_text || item.text?.content || "").join("");
+}
+
+function normalizeNotionId(value = "") {
+  const id = String(value)
+    .split("?")[0]
+    .replace(/\/$/, "")
+    .split("/")
+    .pop()
+    ?.replaceAll("-", "");
+
+  if (!id || !/^[0-9a-f]{32}$/i.test(id)) return "";
+  return `${id.slice(0, 8)}-${id.slice(8, 12)}-${id.slice(12, 16)}-${id.slice(16, 20)}-${id.slice(20)}`.toLowerCase();
 }
 
 function propertyText(properties, name) {
@@ -126,9 +234,12 @@ async function getMarkdown(pageId) {
   return body.markdown || "";
 }
 
-function inlineMarkdown(value) {
+function inlineMarkdown(value, postById = new Map()) {
   let html = escapeHtml(value);
+  html = html.replace(/&lt;br\s*\/?&gt;/gi, "<br>");
   html = html.replace(/&lt;mention-page url=&quot;([^"]+)&quot;\/&gt;/g, (_match, url) => {
+    const post = postById.get(normalizeNotionId(url));
+    if (post) return `<a href="/posts/${post.slug}">${escapeHtml(post.title)}</a>`;
     return `<a href="${url}">linked page</a>`;
   });
   html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
@@ -137,7 +248,94 @@ function inlineMarkdown(value) {
   return html;
 }
 
-function markdownToHtml(markdown = "") {
+function youtubeEmbedUrl(value = "") {
+  try {
+    const url = new URL(value);
+    let id = "";
+
+    if (url.hostname === "youtu.be") {
+      id = url.pathname.slice(1);
+    } else if (url.hostname.endsWith("youtube.com")) {
+      id = url.searchParams.get("v") || "";
+      if (!id && url.pathname.startsWith("/embed/")) id = url.pathname.split("/")[2] || "";
+      if (!id && url.pathname.startsWith("/shorts/")) id = url.pathname.split("/")[2] || "";
+    }
+
+    return id ? `https://www.youtube.com/embed/${encodeURIComponent(id)}` : "";
+  } catch {
+    return "";
+  }
+}
+
+function notionBlockTag(line) {
+  const trimmed = line.trim();
+
+  if (/^<callout(?:\s[^>]*)?>$/i.test(trimmed)) {
+    const icon = trimmed.match(/\sicon="([^"]+)"/i)?.[1] || "";
+    return {
+      type: "open",
+      html: `<aside class="notion-callout">${icon ? `<span class="notion-callout-icon">${escapeHtml(icon)}</span>` : ""}<div>`,
+    };
+  }
+
+  if (/^<\/callout>$/i.test(trimmed)) {
+    return { type: "close", html: "</div></aside>" };
+  }
+
+  if (/^<columns(?:\s[^>]*)?>$/i.test(trimmed)) {
+    return { type: "open", html: '<div class="notion-columns">' };
+  }
+
+  if (/^<\/columns>$/i.test(trimmed)) {
+    return { type: "close", html: "</div>" };
+  }
+
+  if (/^<column(?:\s[^>]*)?>$/i.test(trimmed)) {
+    return { type: "open", html: '<div class="notion-column">' };
+  }
+
+  if (/^<\/column>$/i.test(trimmed)) {
+    return { type: "close", html: "</div>" };
+  }
+
+  const database = trimmed.match(/^<database\b[^>]*\burl="([^"]+)"[^>]*>(?:<\/database>)?$/i);
+  if (database) {
+    return {
+      type: "self",
+      html: `<aside class="notion-fallback"><a href="${escapeHtml(database[1])}">Embedded Notion database</a></aside>`,
+    };
+  }
+
+  const video = trimmed.match(/^<video\b[^>]*\bsrc="([^"]+)"[^>]*>(?:<\/video>)?$/i);
+  if (video) {
+    const embedUrl = youtubeEmbedUrl(video[1]);
+    if (embedUrl) {
+      return {
+        type: "self",
+        html: `<figure class="notion-video"><iframe src="${embedUrl}" title="Embedded video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></figure>`,
+      };
+    }
+
+    return {
+      type: "self",
+      html: `<aside class="notion-fallback"><a href="${escapeHtml(video[1])}">Embedded video</a></aside>`,
+    };
+  }
+
+  const unknown = trimmed.match(/^<unknown\b[^>]*\burl="([^"]+)"(?:[^>]*\balt="([^"]+)")?[^>]*\/>$/i);
+  if (unknown) {
+    const label = unknown[2] || "Embedded Notion block";
+    const className = label.toLowerCase() === "tweet" ? "notion-fallback notion-tweet" : "notion-fallback";
+    return {
+      type: "self",
+      html: `<aside class="${className}"><a href="${escapeHtml(unknown[1])}">${escapeHtml(label)}</a></aside>`,
+    };
+  }
+
+  return null;
+}
+
+function markdownToHtml(markdown = "", postById = new Map()) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const html = [];
   let paragraph = [];
@@ -146,7 +344,7 @@ function markdownToHtml(markdown = "") {
 
   function flushParagraph() {
     if (!paragraph.length) return;
-    html.push(`<p>${paragraph.map((line) => inlineMarkdown(line)).join("<br>")}</p>`);
+    html.push(`<p>${paragraph.map((line) => inlineMarkdown(line, postById)).join("<br>")}</p>`);
     paragraph = [];
   }
 
@@ -157,12 +355,19 @@ function markdownToHtml(markdown = "") {
   }
 
   for (const line of lines) {
+    const notionTag = notionBlockTag(line);
+    if (notionTag) {
+      flushParagraph();
+      html.push(notionTag.html);
+      continue;
+    }
+
     if (/^\s*<empty-block\/>\s*$/.test(line)) {
       flushParagraph();
       continue;
     }
 
-    if (line.startsWith("```")) {
+    if (line.trimStart().startsWith("```")) {
       if (inCode) {
         flushCode();
         inCode = false;
@@ -183,7 +388,7 @@ function markdownToHtml(markdown = "") {
       continue;
     }
 
-    const image = line.match(/^!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/);
+    const image = line.trim().match(/^!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/);
     if (image) {
       flushParagraph();
       html.push(`<figure><img src="${escapeHtml(image[2])}" alt="${escapeHtml(image[1])}" loading="lazy"></figure>`);
@@ -194,28 +399,28 @@ function markdownToHtml(markdown = "") {
     if (heading) {
       flushParagraph();
       const level = Math.min(heading[1].length + 1, 3);
-      html.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`);
+      html.push(`<h${level}>${inlineMarkdown(heading[2], postById)}</h${level}>`);
       continue;
     }
 
     const quote = line.match(/^>\s+(.+)$/);
     if (quote) {
       flushParagraph();
-      html.push(`<blockquote>${inlineMarkdown(quote[1])}</blockquote>`);
+      html.push(`<blockquote>${inlineMarkdown(quote[1], postById)}</blockquote>`);
       continue;
     }
 
     const listItem = line.match(/^[-*]\s+(.+)$/);
     if (listItem) {
       flushParagraph();
-      html.push(`<ul><li>${inlineMarkdown(listItem[1])}</li></ul>`);
+      html.push(`<ul><li>${inlineMarkdown(listItem[1], postById)}</li></ul>`);
       continue;
     }
 
     const orderedItem = line.match(/^\d+\.\s+(.+)$/);
     if (orderedItem) {
       flushParagraph();
-      html.push(`<ol><li>${inlineMarkdown(orderedItem[1])}</li></ol>`);
+      html.push(`<ol><li>${inlineMarkdown(orderedItem[1], postById)}</li></ol>`);
       continue;
     }
 
@@ -229,25 +434,39 @@ function markdownToHtml(markdown = "") {
 
 async function syncFromNotion() {
   const pages = await queryNotionPosts();
-  const posts = [];
+  const rawPosts = [];
 
   for (const page of pages) {
     const title = propertyText(page.properties, "Name").trim();
     if (!title) continue;
 
     const markdown = await getMarkdown(page.id);
-    posts.push({
+    rawPosts.push({
       id: page.id,
       title,
       slug: slugify(title, page.id),
       date: propertyDate(page.properties, "Published"),
       tags: propertyTags(page.properties, "Tags"),
       description: propertyText(page.properties, "Description").trim(),
-      html: markdownToHtml(markdown),
       markdown,
       updated: Date.parse(page.last_edited_time || page.created_time || "") || Date.now(),
     });
   }
+
+  const postById = new Map(
+    rawPosts.map((post) => [
+      normalizeNotionId(post.id),
+      {
+        title: post.title,
+        slug: post.slug,
+      },
+    ]),
+  );
+
+  const posts = rawPosts.map((post) => ({
+    ...post,
+    html: markdownToHtml(post.markdown, postById),
+  }));
 
   return {
     generatedAt: new Date().toISOString(),
