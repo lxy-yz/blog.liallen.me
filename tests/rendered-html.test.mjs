@@ -29,8 +29,10 @@ test("server-renders migrated blog home", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Blog \| Blog<\/title>/i);
+  assert.match(html, /<title>Home \| Blog<\/title>/i);
   assert.match(html, /Observations and thoughts from everyday life\./);
+  assert.match(html, /Copyright © 2026\./);
+  assert.doesNotMatch(html, /All rights reserved/);
   assert.doesNotMatch(html, /Observe first\.<\/p><h1>Understand later\./);
   assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-8EV4KNV3LN/);
   assert.match(html, /gtag\("config", "G-8EV4KNV3LN"\)/);

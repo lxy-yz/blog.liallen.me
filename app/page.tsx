@@ -3,7 +3,7 @@ import Link from "next/link";
 import { posts } from "./lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Home",
   description: "Observations and thoughts from everyday life.",
 };
 

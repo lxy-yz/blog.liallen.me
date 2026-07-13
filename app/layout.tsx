@@ -45,7 +45,7 @@ export default function RootLayout({
         {children}
         <footer className="site-footer">
           <span>Observe first. Understand later.</span>
-          <span>Copyright © 2026. All rights reserved.</span>
+          <span>Copyright © 2026.</span>
         </footer>
       </body>
     </html>
