@@ -1,5 +1,12 @@
 {
   "buildCommand": "npm run export:vercel",
   "outputDirectory": "vercel-dist",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/now",
+      "destination": "https://liallen.me/now",
+      "permanent": true
+    }
+  ]
 }
