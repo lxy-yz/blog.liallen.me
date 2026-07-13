@@ -23,10 +23,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function Comments() {
-  const repo = process.env.GISCUS_REPO;
-  const repoId = process.env.GISCUS_REPO_ID;
-  const category = process.env.GISCUS_CATEGORY || "Comments";
-  const categoryId = process.env.GISCUS_CATEGORY_ID;
+  const repo = process.env.GISCUS_REPO || "lxy-yz/blog.liallen.me";
+  const repoId = process.env.GISCUS_REPO_ID || "R_kgDOTWz0SA";
+  const category = process.env.GISCUS_CATEGORY || "General";
+  const categoryId =
+    process.env.GISCUS_CATEGORY_ID || "DIC_kwDOTWz0SM4DBFid";
 
   if (!repo || !repoId || !categoryId) {
     return (

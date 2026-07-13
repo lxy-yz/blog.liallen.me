@@ -45,14 +45,16 @@ test("server-renders posts archive with Notion CMS content", async () => {
   assert.match(html, /你不控制媒介，媒介将控制你/);
 });
 
-test("server-renders a post with comment setup fallback", async () => {
+test("server-renders a post with giscus comments", async () => {
   const response = await render("/posts/a-life-debugger-135d55c1");
   assert.equal(response.status, 200);
 
   const html = await response.text();
   assert.match(html, /A life debugger/);
   assert.match(html, /Comments/);
-  assert.match(html, /GISCUS_REPO/);
+  assert.match(html, /https:\/\/giscus\.app\/client\.js/);
+  assert.match(html, /lxy-yz\/blog\.liallen\.me/);
+  assert.doesNotMatch(html, /Set <code>GISCUS_REPO<\/code>/);
 });
 
 test("does not render Notion empty block placeholders", async () => {
