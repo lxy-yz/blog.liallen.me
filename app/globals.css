@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf7;
+  --foreground: #252525;
+  --muted: #706f6b;
+  --line: #ded9cf;
+  --accent: #0f766e;
+  --accent-soft: #d9f1ec;
+  --card: #ffffff;
+  --code: #f0ede6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #181817;
+    --foreground: #efeee9;
+    --muted: #aaa69d;
+    --line: #3a3936;
+    --accent: #5eead4;
+    --accent-soft: #143f3a;
+    --card: #20201e;
+    --code: #2d2c29;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.72;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+.site-header,
+.site-footer,
+main {
+  margin: 0 auto;
+  width: min(880px, calc(100% - 32px));
+}
+
+.site-header {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.brand {
+  font-weight: 750;
+  text-decoration: none;
+}
+
+nav {
+  color: var(--muted);
+  display: flex;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.hero {
+  padding: 72px 0 48px;
+}
+
+.eyebrow,
+.date,
+.back,
+.site-footer,
+.archive > p,
+.post-header > p {
+  color: var(--muted);
+}
+
+.hero h1,
+.archive h1,
+.post h1 {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 9vw, 5.6rem);
+  letter-spacing: 0;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.hero p:last-child {
+  font-size: 1.25rem;
+  margin-top: 24px;
+  max-width: 560px;
+}
+
+.section-heading {
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 0 0 12px;
+}
+
+.post-list {
+  display: grid;
+  gap: 12px;
+  padding-bottom: 48px;
+}
+
+.post-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.post-card a {
+  display: block;
+  padding: 18px;
+  text-decoration: none;
+}
+
+.post-card h2 {
+  font-size: 1.35rem;
+  margin: 4px 0;
+}
+
+.post-card p {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.tags span {
+  background: var(--accent-soft);
+  border-radius: 999px;
+  color: var(--foreground);
+  font-size: 0.78rem;
+  padding: 2px 8px;
+}
+
+.archive,
+.post {
+  padding: 48px 0;
+}
+
+.post {
+  width: min(760px, calc(100% - 32px));
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.post-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 32px;
+}
+
+.content {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-size: 1.08rem;
+  padding-top: 24px;
+}
+
+.content h2,
+.content h3 {
+  line-height: 1.2;
+  margin-top: 2.2em;
+}
+
+.content img {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 28px 0;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+blockquote,
+.callout {
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  margin: 24px 0;
+  padding: 2px 18px;
+}
+
+pre {
+  background: var(--code);
+  border-radius: 8px;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+code {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.92em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 32px 0;
+}
+
+.comments {
+  border-top: 1px solid var(--line);
+  margin-top: 56px;
+  padding-top: 24px;
+}
+
+.comments.muted {
+  color: var(--muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 0 48px;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+}
