@@ -9,15 +9,65 @@ workerUrl.searchParams.set("export", String(Date.now()));
 
 const { default: worker } = await import(workerUrl.href);
 
+function slugify(title) {
+  return (
+    title
+      .toLowerCase()
+      .trim()
+      .replace(/['’]/g, "")
+      .replace(/[^\p{L}\p{N}]+/gu, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80) || "post"
+  );
+}
+
+function legacySlugify(title, id) {
+  const base = title
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+
+  return `${base || "post"}-${id.replaceAll("-", "").slice(0, 8)}`;
+}
+
+function postRoutes(posts) {
+  const seen = new Map();
+  const routes = [];
+
+  for (const post of posts) {
+    const baseSlug = slugify(post.title);
+    const count = seen.get(baseSlug) || 0;
+    seen.set(baseSlug, count + 1);
+
+    const slug = count ? `${baseSlug}-${count + 1}` : baseSlug;
+    const legacySlug =
+      post.slug === slug ? legacySlugify(post.title, post.id) : post.slug;
+
+    routes.push({
+      pathname: `/posts/${slug}`,
+      file: `posts/${slug}/index.html`,
+    });
+
+    if (legacySlug !== slug) {
+      routes.push({
+        pathname: `/posts/${legacySlug}`,
+        file: `posts/${legacySlug}/index.html`,
+      });
+    }
+  }
+
+  return routes;
+}
+
 const routes = [
   { pathname: "/", file: "index.html" },
   { pathname: "/posts", file: "posts/index.html" },
   { pathname: "/rss.xml", file: "rss.xml" },
   { pathname: "/sitemap.xml", file: "sitemap.xml" },
-  ...cms.posts.map((post) => ({
-    pathname: `/posts/${post.slug}`,
-    file: `posts/${post.slug}/index.html`,
-  })),
+  ...postRoutes(cms.posts),
 ];
 
 await rm(outDir, { recursive: true, force: true });

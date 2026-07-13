@@ -44,7 +44,7 @@ function escapeHtml(value = "") {
     .replaceAll('"', "&quot;");
 }
 
-function slugify(title, id) {
+function slugify(title) {
   const base = title
     .toLowerCase()
     .normalize("NFKD")
@@ -53,7 +53,7 @@ function slugify(title, id) {
     .replace(/^-+|-+$/g, "")
     .slice(0, 80);
 
-  return `${base || "post"}-${id.replaceAll("-", "").slice(0, 8)}`;
+  return base || "post";
 }
 
 async function notionRequest(endpoint, init = {}) {

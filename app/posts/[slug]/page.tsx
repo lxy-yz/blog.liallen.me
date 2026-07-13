@@ -8,7 +8,15 @@ type PageProps = {
 };
 
 export function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
+  return posts.flatMap((post) => {
+    const params = [{ slug: post.slug }];
+
+    if (post.legacySlug && post.legacySlug !== post.slug) {
+      params.push({ slug: post.legacySlug });
+    }
+
+    return params;
+  });
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

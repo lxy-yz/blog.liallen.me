@@ -35,6 +35,8 @@ test("server-renders migrated blog home", async () => {
   assert.match(html, /https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-8EV4KNV3LN/);
   assert.match(html, /gtag\("config", "G-8EV4KNV3LN"\)/);
   assert.match(html, /Who stole my pace\?/);
+  assert.match(html, /href="\/posts\/who-stole-my-pace"/);
+  assert.doesNotMatch(html, /href="\/posts\/who-stole-my-pace-86567ee3"/);
   assert.doesNotMatch(html, /Your site is taking shape|Codex is working/);
 });
 
@@ -49,7 +51,7 @@ test("server-renders posts archive with Notion CMS content", async () => {
 });
 
 test("server-renders a post with giscus comments", async () => {
-  const response = await render("/posts/a-life-debugger-135d55c1");
+  const response = await render("/posts/a-life-debugger");
   assert.equal(response.status, 200);
 
   const html = await response.text();
@@ -60,15 +62,23 @@ test("server-renders a post with giscus comments", async () => {
 });
 
 test("does not render Notion empty block placeholders", async () => {
-  const response = await render("/posts/5-kilometers-2c675f7b");
+  const response = await render("/posts/5-kilometers");
   assert.equal(response.status, 200);
 
   const html = await response.text();
   assert.doesNotMatch(html, /empty-block/);
 });
 
+test("keeps legacy hashed post URLs working", async () => {
+  const response = await render("/posts/5-kilometers-2c675f7b");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /5 kilometers/);
+});
+
 test("preserves Notion soft line breaks inside paragraphs", async () => {
-  const response = await render("/posts/who-stole-my-pace-86567ee3");
+  const response = await render("/posts/who-stole-my-pace");
   assert.equal(response.status, 200);
 
   const html = await response.text();
@@ -79,7 +89,7 @@ test("preserves Notion soft line breaks inside paragraphs", async () => {
 test("exports Vercel static pages with analytics", async () => {
   const html = await readFile(new URL("../vercel-dist/index.html", import.meta.url), "utf8");
   const postHtml = await readFile(
-    new URL("../vercel-dist/posts/who-stole-my-pace-86567ee3/index.html", import.meta.url),
+    new URL("../vercel-dist/posts/who-stole-my-pace/index.html", import.meta.url),
     "utf8",
   );
 
