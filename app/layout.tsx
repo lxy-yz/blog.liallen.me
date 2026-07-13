@@ -36,9 +36,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="site-header">
-          <a className="brand" href="/">
-            Blog
-          </a>
           <nav>
             <a href="/">Home</a>
             <a href="/posts">Posts</a>

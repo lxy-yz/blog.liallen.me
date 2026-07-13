@@ -4,14 +4,14 @@ import { posts } from "../lib/blog";
 
 export const metadata: Metadata = {
   title: "Posts",
-  description: "All migrated posts from the original Notion blog.",
+  description: "All posts synced from the Notion CMS.",
 };
 
 export default function PostsPage() {
   return (
     <main className="archive">
       <h1>Posts</h1>
-      <p>{posts.length} migrated posts from the original Notion blog.</p>
+      <p>{posts.length} posts synced from Notion CMS.</p>
       <section className="post-list">
         {posts.map((post) => (
           <article className="post-card" key={post.id}>

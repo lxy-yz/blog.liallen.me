@@ -1,6 +1,32 @@
 # Blog Migration
 
-This repo migrates `https://blog.liallen.me/` from a public Notion site into a zero-dependency static blog.
+This repo uses Notion as the CMS for `https://blog.liallen.me/`.
+
+The site does not crawl the live blog URL. Content is synced from the Notion API into `data/notion-cms.json`, and the app renders that generated cache.
+
+## Notion CMS
+
+The source data source is:
+
+```sh
+NOTION_DATA_SOURCE_ID=eb6eb762-fc74-4201-bf9b-5727a50256d2
+```
+
+Create a Notion internal connection with read-content access, share the `All posts` database with that connection, then set:
+
+```sh
+NOTION_TOKEN=secret_...
+NOTION_DATA_SOURCE_ID=eb6eb762-fc74-4201-bf9b-5727a50256d2
+NOTION_VERSION=2026-03-11
+```
+
+Refresh the local CMS cache:
+
+```sh
+npm run sync:notion
+```
+
+`npm run build` runs the sync in optional mode. If `NOTION_TOKEN` is present it refreshes from Notion; otherwise it regenerates from the checked-in cache so local builds still work.
 
 ## Local preview
 

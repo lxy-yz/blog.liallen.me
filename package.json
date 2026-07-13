@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "build": "node scripts/sync-notion.mjs --optional && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "npm run build && node --test tests/*.test.mjs",
+    "sync:notion": "node scripts/sync-notion.mjs",
     "export:static": "node scripts/build.mjs"
   },
   "dependencies": {

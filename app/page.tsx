@@ -13,8 +13,7 @@ export default function Home() {
   return (
     <main className="home">
       <section className="hero">
-        <p className="eyebrow">Observe first.</p>
-        <h1>Understand later.</h1>
+        <h1>Blog</h1>
         <p>Observations and thoughts from everyday life.</p>
       </section>
 

@@ -61,13 +61,8 @@ main {
   border-bottom: 1px solid var(--line);
   display: flex;
   gap: 16px;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 28px 0;
-}
-
-.brand {
-  font-weight: 750;
-  text-decoration: none;
 }
 
 nav {
