@@ -273,10 +273,65 @@ nav a:focus-visible {
   margin-bottom: 0;
 }
 
+.content ul,
+.content ol {
+  margin: 0 0 1.05em;
+  padding-left: 1.35em;
+}
+
+.content li + li {
+  margin-top: 0.25em;
+}
+
 .content h2,
-.content h3 {
+.content h3,
+.content h4 {
   line-height: 1.2;
-  margin-top: 2.2em;
+  margin: 2.2em 0 0.75em;
+}
+
+.content h2 {
+  font-size: 1.35rem;
+}
+
+.content h3 {
+  font-size: 1.15rem;
+}
+
+.content h4 {
+  color: var(--muted);
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.content em {
+  font-style: italic;
+}
+
+.table-scroll {
+  margin: 1.5em 0;
+  overflow-x: auto;
+}
+
+.content table {
+  border-collapse: collapse;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  min-width: 100%;
+}
+
+.content th,
+.content td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.content th {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .content img {
@@ -302,67 +357,6 @@ blockquote,
   color: var(--muted);
   margin: 24px 0;
   padding: 2px 18px;
-}
-
-.notion-callout,
-.notion-fallback {
-  background: var(--code);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--foreground);
-  display: flex;
-  gap: 12px;
-  margin: 24px 0;
-  padding: 14px 16px;
-}
-
-.notion-callout > div {
-  min-width: 0;
-}
-
-.notion-callout > div > :last-child {
-  margin-bottom: 0;
-}
-
-.notion-callout-icon {
-  flex: 0 0 auto;
-  line-height: 1.7;
-}
-
-.notion-columns {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
-  margin: 24px 0;
-}
-
-.notion-column {
-  min-width: 0;
-}
-
-.notion-fallback {
-  color: var(--muted);
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.95rem;
-}
-
-.notion-tweet {
-  border-left: 3px solid var(--accent);
-}
-
-.notion-video {
-  aspect-ratio: 16 / 9;
-  background: var(--code);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.notion-video iframe {
-  border: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
 }
 
 pre {

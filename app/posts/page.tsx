@@ -4,7 +4,7 @@ import { posts } from "../lib/blog";
 
 export const metadata: Metadata = {
   title: "Posts",
-  description: "All posts synced from the Notion CMS.",
+  description: "All posts from local Markdown files.",
 };
 
 export default function PostsPage() {

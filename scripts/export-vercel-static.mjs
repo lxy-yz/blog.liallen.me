@@ -1,6 +1,5 @@
-import { cp, mkdir, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
-import cms from "../data/notion-cms.json" with { type: "json" };
 
 const root = process.cwd();
 const outDir = path.join(root, "vercel-dist");
@@ -8,6 +7,44 @@ const workerUrl = new URL("../dist/server/index.js", import.meta.url);
 workerUrl.searchParams.set("export", String(Date.now()));
 
 const { default: worker } = await import(workerUrl.href);
+
+function frontmatterValue(value = "") {
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+
+  try {
+    return JSON.parse(trimmed);
+  } catch {
+    return trimmed.replace(/^["']|["']$/g, "");
+  }
+}
+
+async function readPosts() {
+  const postsDir = path.join(root, "content", "posts");
+  const files = (await readdir(postsDir)).filter((file) => file.endsWith(".md"));
+  const posts = [];
+
+  for (const file of files) {
+    const raw = await readFile(path.join(postsDir, file), "utf8");
+    const match = raw.replace(/\r\n/g, "\n").match(/^---\n([\s\S]*?)\n---\n?/);
+    if (!match) throw new Error(`Missing frontmatter in ${path.join("content/posts", file)}`);
+
+    const frontmatter = {};
+    for (const line of match[1].split("\n")) {
+      const field = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+      if (!field) continue;
+      frontmatter[field[1]] = frontmatterValue(field[2]);
+    }
+
+    posts.push({
+      id: String(frontmatter.id || file.replace(/\.md$/, "")),
+      title: String(frontmatter.title || file.replace(/\.md$/, "")),
+      slug: String(frontmatter.slug || file.replace(/\.md$/, "")),
+    });
+  }
+
+  return posts;
+}
 
 function slugify(title) {
   const pinyin = {
@@ -167,7 +204,7 @@ const routes = [
   { pathname: "/posts", file: "posts/index.html" },
   { pathname: "/rss.xml", file: "rss.xml" },
   { pathname: "/sitemap.xml", file: "sitemap.xml" },
-  ...postRoutes(cms.posts),
+  ...postRoutes(await readPosts()),
 ];
 
 await rm(outDir, { recursive: true, force: true });
