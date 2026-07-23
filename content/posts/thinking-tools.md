@@ -9,14 +9,14 @@ tags: ["Decision Making"]
 ---
 
 ## Disambiguation
-- [**Mental Model**](https://fs.blog/category/mental-models/)[ ](https://fs.blog/category/mental-models/)A [*simplified*](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25)* *explanation of how things work
+- [**Mental Model**](https://fs.blog/category/mental-models/)[ ](https://fs.blog/category/mental-models/)A [*simplified*](./thinking-tools.md)* *explanation of how things work
 - **Principle**
   Fundamental truths or law that serves as the basis for a system of belief or behavior.
 - **Value**
   Internal moral code
 
 ## General
-### [Mental Models](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25)
+### [Mental Models](./thinking-tools.md)
 i.e. how to make “smart” decisions (the **reasoning **of our thought process).
 
 - The Map Is Not the Territory linked page
@@ -91,11 +91,11 @@ Tools I use for better self awareness
 - Self Reflection (Daily, Weekly Journaling)
 - Surveying others
   - Peer reviews at work
-  - [Radical candor](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25) linked page
+  - [Radical candor](./thinking-tools.md) linked page
   - Therapist
   - [Radical self-inquiry](https://qz.com/865769/startup-founders-are-embracing-radical-self-inquiry-to-keep-their-emotions-from-ruining-their-companies/)
 
-### [Principles](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25)
+### [Principles](./thinking-tools.md)
 i.e. the rules I’m following and sticking with when making decisions in similar situations
 
 - [Just about right](https://en.wikipedia.org/wiki/Goldilocks_principle) linked page
@@ -103,13 +103,13 @@ i.e. the rules I’m following and sticking with when making decisions in simila
 - Own outcomes
   - [Everything is my fault ](https://sive.rs/my-fault)linked page
 - Be radically open-minded
-  - [Understand ego and blind spots](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25)
+  - [Understand ego and blind spots](./thinking-tools.md)
   - Understand people are wired very differently and appreciate “thoughtful disagreement”
   - Triangulate view with believable people who are willing to disagree
 - Prepare for the worst
-  - [Probabilistic thinking](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25)
+  - [Probabilistic thinking](./thinking-tools.md)
   - [How to thrive in an unknowable future](https://sive.rs/d1t)
-- [Second-order thinking](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25)
+- [Second-order thinking](./thinking-tools.md)
   - Synthesize the situation through time
   - [I’m a very slow thinker](https://sive.rs/slow)
 - Antifragile
@@ -121,6 +121,6 @@ i.e. the rules I’m following and sticking with when making decisions in simila
 ### [Career Change](https://fs.blog/mental-models-for-career-changes/)
 - Promotion can be appealing (zoom in) but at cost of unwanted liability (zoom out)
 - Change is inevitable but “timing is everything”
-- Thinking [inversely](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25) helps us avoid [bad decisions](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25)
+- Thinking [inversely](./thinking-tools.md) helps us avoid [bad decisions](./thinking-tools.md)
 - Stories
   - [Damon Chen (big tech corp → solo entrepreneur) side gig story ](https://testimonial.to/blog/one-year-of-indie-hacking-i-have-learned-a-lot)

@@ -10,11 +10,11 @@ tags: ["Decision Making", "Introduction"]
 
 There’re numerous factors I’ve considered when making the decision, to name a few:
 
-- [Lifestyle mirage](/posts/lifestyle-mirage)
-- [Ditch the lie of inaction](/posts/ditch-the-lie-of-inaction)
-- [The complacency prison](/posts/the-complacency-prison)
-- [Escape the rat race](/posts/escape-the-rat-race)
-- [Life isn’t a lottery ticket](/posts/life-isn-t-a-lottery-ticket)
+- [Lifestyle mirage](./lifestyle-mirage.md)
+- [Ditch the lie of inaction](./ditch-the-lie-of-inaction.md)
+- [The complacency prison](./the-complacency-prison.md)
+- [Escape the rat race](./escape-the-rat-race.md)
+- [Life isn’t a lottery ticket](./life-isn-t-a-lottery-ticket.md)
 
 However, over-scrutinizing isn’t helpful.
 Ultimately, I find it boils down to:

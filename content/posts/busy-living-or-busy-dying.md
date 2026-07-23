@@ -7,4 +7,4 @@ updated: 1778859900000
 description: "The paradox of life"
 tags: ["Belief"]
 ---
-[Embedded video](https://www.youtube.com/watch?v=kkPdmPbxCUQ)
+![Embedded video](https://www.youtube.com/watch?v=kkPdmPbxCUQ)

@@ -10,7 +10,7 @@ tags: ["Technology"]
 [Embedded video](https://youtu.be/8bZh5LMaSmE?t=905)
 > Duplication is far cheaper than the wrong abstraction - [Sandi Metz](https://sandimetz.com/about)
 
-I was thinking about [decision making](/b83b34118b0943dd953d4f364ee4bfc9?pvs=25) lately with a wish to synthesize something into [principles](/cdd16a320ed647b6b28e3354ea3fe44a) so that I don’t have to decide again and again in similar situations. But should I reach out to principles when something happened for the first or second time? I was thinking if programming can shed some light on this.
+I was thinking about [decision making](./thinking-tools.md) lately with a wish to synthesize something into [principles](/cdd16a320ed647b6b28e3354ea3fe44a) so that I don’t have to decide again and again in similar situations. But should I reach out to principles when something happened for the first or second time? I was thinking if programming can shed some light on this.
 
 Imagine a software engineer working on a feature, and getting stumbled across something like
 ```ruby
@@ -104,4 +104,4 @@ def i_am_super_dry(A, B, ..., Z)
 end
     ```
 
-I am not a fan of over-engineering or [premature optimizations](https://wiki.c2.com/?PrematureOptimization), so I generally embrace the [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)) from Martin Fowler. And I firmly believe that the cost of wrong abstraction is **way** **higher** than no abstraction at all. Without fully understand the situation, we can’t even be sure if the situations are similar to each other or not. Therefore, it might be okay to just [let the randomness rule](/e5e8125fd1e143fb9df0c2e0e237dbaf?pvs=25) from time to time.
+I am not a fan of over-engineering or [premature optimizations](https://wiki.c2.com/?PrematureOptimization), so I generally embrace the [Rule of three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)) from Martin Fowler. And I firmly believe that the cost of wrong abstraction is **way** **higher** than no abstraction at all. Without fully understand the situation, we can’t even be sure if the situations are similar to each other or not. Therefore, it might be okay to just [let the randomness rule](./fuse-a-bit-of-randomness-into-life.md) from time to time.

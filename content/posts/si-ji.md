@@ -7,7 +7,6 @@ updated: 1783954800000
 description: ""
 tags: []
 ---
-
 满襟的泪水 哗啦啦地流
 ta 抬起了头 看不清模样
 
@@ -36,4 +35,4 @@ ta 抬起了头 看不清模样
 抬起了头
 看不清模样
 
-相关：[都市蒙太奇](/posts/du-shi-meng-tai-qi)
+相关：[都市蒙太奇](./du-shi-meng-tai-qi.md)

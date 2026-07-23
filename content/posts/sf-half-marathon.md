@@ -8,7 +8,7 @@ description: ""
 tags: ["Lifestyle"]
 ---
 
-> A follow-up post of [SF 10k race](/posts/sf-10k-race)
+> A follow-up post of [SF 10k race](./sf-10k-race.md)
 
 > From the outside, they look like dramatic, almost revolutionary breakthroughs. But from the inside, they *feel* completely different, more like an organic development process - The Flywheel Effect
 Momentum is a great thing. Once you get the flywheel spinning, there’s little you’ll have to do to keep it going. Despite relocating to Seattle, attending this event felt natural to me. It would have been harder to explain my absence than to participate.
@@ -58,11 +58,11 @@ Race Information
 | A | Enjoy enjoy enjoy | *Yes* |
 | C | Don't mess it up | *Yes* |
 | B | PB | *No* |
-![](/assets/sf-half-marathon/01-00c4d47d94b8a405-untitled.png)
+![](../../public/assets/sf-half-marathon/01-00c4d47d94b8a405-untitled.png)
 
-![](/assets/sf-half-marathon/02-b23905d4c114e3a7-untitled.png)
+![](../../public/assets/sf-half-marathon/02-b23905d4c114e3a7-untitled.png)
 
-![](/assets/sf-half-marathon/03-6fa644749bb6e40f-img_2845.jpeg)
+![](../../public/assets/sf-half-marathon/03-6fa644749bb6e40f-img_2845.jpeg)
 
   > Embedded: Embedded content
   > Embedded: Embedded content

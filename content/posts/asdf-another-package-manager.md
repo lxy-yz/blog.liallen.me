@@ -7,28 +7,20 @@ updated: 1778859900000
 description: "the ultimate version manager for programming languages"
 tags: ["Technology"]
 ---
-Let’s start with a simple question “how would you manage multiple version of Node.js on a single machine”, you may come across with various options, either is great
-
-    > Embedded: external_object_instance
-
-    > Embedded: external_object_instance
+How would you manage multiple version of Node.js on a single machine?
+You may come across https://github.com/tj/n or https://github.com/nvm-sh/nvm.
 
 Not long after, the latest stable version of Node.js is released, along with all the promised improvements, you’ll have projects to upgrade
-
-    In `n`,
-
-    In `nvm`,
-
-    ```shell
+In `n`,
+```shell
 n lts
 n
-    ```
-
-    ```shell
+```
+In `nvm`,
+```shell
 nvm install --lts
 nvm use --lts
-    ```
-
+```
 Equally simple.
 
 However, every once in a while, you’ll need to switch another project written in Ruby, potentially the backend of your Node.js project, then you’ll need to ask the very same question in the beginning of article for Ruby. This time you may come across with
@@ -38,20 +30,16 @@ However, every once in a while, you’ll need to switch another project written 
     > Embedded: external_object_instance
 
 How about using the latest stable version of Ruby then?
-
-    In `rbenv`,
-
-    In `rvm`,
-
-    ```shell
+In `rbenv`,
+```shell
 rbenv install 3.0.2
 rbenv use 3.0.2
-    ```
-
-    ```shell
+```
+In `rvm`,
+```shell
 rvm install --lts
 rvm use --lts
-    ```
+```
 
 Here we start to see some issue. Not a surprise, the CLI (command line interface) for the Node and Ruby version managers are different, and discrepancies are hard to remember due to **context switching**.
 
@@ -63,9 +51,9 @@ It’s clear that what we really want is a **single** CLI tool that manages diff
     > Embedded: external_object_instance
     > Embedded: bookmark
 
-    ```shell
+```shell
 asdf install `name` `version`
 asdf local `name` `version`
-    ```
+```
 
 Give it a try! :D

@@ -138,6 +138,24 @@ test("links migrated page mentions to local posts", async () => {
   assert.doesNotMatch(html, /linked page/);
 });
 
+test("renders editor-relative Markdown paths as site URLs", async () => {
+  const source = await readFile(
+    new URL("../content/posts/ji-xing-shan-he.md", import.meta.url),
+    "utf8",
+  );
+  assert.match(source, /\[山路夜骑\]\(\.\/shan-lu-ye-qi\.md\)/);
+  assert.match(source, /!\[\]\(\.\.\/\.\.\/public\/assets\/ji-xing-shan-he\//);
+  assert.doesNotMatch(source, /\]\(\/posts\//);
+  assert.doesNotMatch(source, /\]\(\/assets\//);
+
+  const response = await render("/posts/ji-xing-shan-he");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /href="\/posts\/shan-lu-ye-qi">山路夜骑<\/a>/);
+  assert.match(html, /src="\/assets\/ji-xing-shan-he\/01-[^"]+\.jpeg"/);
+});
+
 test("renders unsupported layout blocks with safe fallbacks", async () => {
   const response = await render("/posts/si-ji");
   assert.equal(response.status, 200);

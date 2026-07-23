@@ -195,6 +195,19 @@ function legacySlugify(title: string, id: string) {
   return `${base || "post"}-${id.replaceAll("-", "").slice(0, 8)}`;
 }
 
+function normalizeMarkdownHref(href: string) {
+  if (href.startsWith("../../public/assets/")) {
+    return href.replace("../../public", "");
+  }
+
+  const localPost = href.match(/^\.\/([^?#]+)\.md([?#].*)?$/);
+  if (localPost) {
+    return `/posts/${localPost[1]}${localPost[2] || ""}`;
+  }
+
+  return href;
+}
+
 function inlineMarkdown(value: string) {
   let html = escapeHtml(value);
   html = html.replace(/&lt;br\s*\/?&gt;/gi, "<br>");
@@ -202,7 +215,9 @@ function inlineMarkdown(value: string) {
   html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/(^|[^\w])_([^_\n]+)_/g, "$1<em>$2</em>");
   html = html.replace(/(^|[^\w])\*([^*\n]+)\*/g, "$1<em>$2</em>");
-  html = html.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)/g, '<a href="$2">$1</a>');
+  html = html.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/|\.{1,2}\/)[^)]+)\)/g, (_match, label, href) => {
+    return `<a href="${normalizeMarkdownHref(href)}">${label}</a>`;
+  });
   return html;
 }
 
@@ -327,11 +342,11 @@ function markdownToHtml(markdown = "") {
       continue;
     }
 
-    const image = line.trim().match(/^!\[(.*)\]\(((?:https?:\/\/|\/).*)\)$/);
+    const image = line.trim().match(/^!\[(.*)\]\(((?:https?:\/\/|\/|\.{1,2}\/).*)\)$/);
     if (image) {
       flushParagraph();
       flushList();
-      html.push(`<figure><img src="${escapeHtml(image[2])}" alt="${escapeHtml(image[1])}" loading="lazy"></figure>`);
+      html.push(`<figure><img src="${escapeHtml(normalizeMarkdownHref(image[2]))}" alt="${escapeHtml(image[1])}" loading="lazy"></figure>`);
       continue;
     }
 

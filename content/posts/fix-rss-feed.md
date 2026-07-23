@@ -11,9 +11,9 @@ I’ve noticed that there is some issue with this blog’s [RSS ](https://en.wik
 ## Problem
 Basically I have noticed two problems
 
-![before fixing the rendering issue](/assets/fix-rss-feed/01-e970e7419d488719-untitled.png)
+![before fixing the rendering issue](../../public/assets/fix-rss-feed/01-e970e7419d488719-untitled.png)
 
-![after fixing the rendering issue](/assets/fix-rss-feed/02-40c49eee155a49af-untitled.png)
+![after fixing the rendering issue](../../public/assets/fix-rss-feed/02-40c49eee155a49af-untitled.png)
 
 - The feed doesn’t render properly in RSS reader
 - The feed doesn’t update (staled) when there is new posts published
@@ -38,7 +38,7 @@ In order to figure out why the feed isn’t rendering properly, I choose to vali
   - etc
 ## How to fix
 To add the missing elements to the feed, I need to figure out how’s the RSS feed gets generated first.
-![Tech stack of this blog](/assets/fix-rss-feed/03-60711eb173d4bddd-untitled.png)
+![Tech stack of this blog](../../public/assets/fix-rss-feed/03-60711eb173d4bddd-untitled.png)
 This blog is actually a static website powered by [Next.js](https://nextjs.org/) with [Notion](https://www.notion.so/) as data source. Image 👆 gives a glimpse about its tech stack.
 Data source are blog posts that made available either through Headless CMS or  Local File System. Since I’m using Notion as a headless CMS, the latest feed of this site can only be derived from accessing the Notion APIs.
 ### Headless CMS

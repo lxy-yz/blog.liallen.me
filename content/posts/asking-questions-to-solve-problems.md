@@ -13,7 +13,7 @@ There’re many great mental tools for making decisions or solving problems. The
 
     To make real use out of it, there’s a hidden premise that better judgment needs to be developed, so that we can associate different tasks with the right matrix. And there’s no replacement for experiences and trial and errors when it comes to forming good judgement.
 
-![](/assets/asking-questions-to-solve-problems/01-12754bb950cbc148-untitled.png)
+![](../../public/assets/asking-questions-to-solve-problems/01-12754bb950cbc148-untitled.png)
 
 The way that works better for me is by **asking questions**, inspired by reading a [great article ](https://humanwhocodes.com/blog/2020/02/how-i-think-about-solving-problems/)from Nicholas C. Zakas. By going through a list of 5 questions in order, it gives me better mental clarity on what actions to take based on what type of problem I’m dealing with.
 
@@ -45,7 +45,7 @@ Technical debt is any part of your application (or related infrastructure) that 
   > The key is that the easier problem must give you the same or a similar outcome to the original problem while saving time (or other resources).
 
 Sometimes, I find flow charts more straightforward than words, therefore I created one for the sake of it.
-![](/assets/asking-questions-to-solve-problems/02-53ec6dd927195f7e-untitled.png)
+![](../../public/assets/asking-questions-to-solve-problems/02-53ec6dd927195f7e-untitled.png)
 
 The questions are phrased in a hierarchy with previous ones as preconditions. It structures our thinking through synthesizing situation at hand. It also sparks insights that lead to better understanding about the problem.
 

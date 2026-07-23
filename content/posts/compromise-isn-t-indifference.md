@@ -9,7 +9,7 @@ tags: ["Career"]
 ---
 Engineering is about weighing trade-offs of different options and determining a course of action afterwards. It's very common in problem-solving, but the challenging part lies in where to *draw the line* for solutions to be considered [reasonably good](https://en.wikipedia.org/wiki/Goldilocks_principle).
 
-I have always been working in product teams with a keen interest to learn about how things work [behind the scenes](/272864174ea44c4e93e3e17ee9b3f5fd). It serves me well to form a more solid understanding of how components connect to each other, as well as exposing me to many more "broken window" experiences.
+I have always been working in product teams with a keen interest to learn about how things work [behind the scenes](./learn-the-basics-well.md). It serves me well to form a more solid understanding of how components connect to each other, as well as exposing me to many more "broken window" experiences.
 
 Some coworkers suggested that I learn to live with things as they are in a job. Aside from genuine appreciation for the advice, I'd like to point out the other side of the spectrum — **don't confuse compromise with indifference.**
 

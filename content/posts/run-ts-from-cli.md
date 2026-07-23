@@ -25,7 +25,7 @@ import ... from './foo.js' // ✅
 - And more 🫱 [Why CommonJS and ES Modules Can’t Get Along](https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1)
 ## Common Solution
 The most common solution is ts-node per google’s search result, better illustrated by [npm trend](https://npmtrends.com/esbuild-register-vs-ts-node-vs-ts-node-dev-vs-tsm-vs-tsx).
-![](/assets/run-ts-from-cli/01-fb6c305e8f487f9b-screen_shot_2023-03-03_at_2.39.47_pm.png)
+![](../../public/assets/run-ts-from-cli/01-fb6c305e8f487f9b-screen_shot_2023-03-03_at_2.39.47_pm.png)
 It solves condition #1 above, but left #2, #3 to me still. Because the incompatibility issue I mentioned above, I’ve tried to
 - set `"type": "module"` in package.json
 - rename file extension to `.mjs`

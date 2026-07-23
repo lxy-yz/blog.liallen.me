@@ -9,7 +9,7 @@ tags: ["Career","Mindset"]
 ---
 >  *Programming into a language, not in it.
 - *[*Code Complete II*](https://www.goodreads.com/book/show/4845.Code_Complete)
-I came across this concept in [Code Complete II ](/6077d04fb2f4465996381e8fb5223778?pvs=25)and it resonates deeply with me.
+I came across this concept in [Code Complete II ](./fitting-goals-into-a-job-not-in-it.md)and it resonates deeply with me.
 A language is just a mean towards a goal (e.g. communicate clearly). Regardless it is a human language to connect human, or programming language to instruct computers. Without knowing what the purpose is, we can hardly assign any meaning to the process.
 
 In the meantime, same as any other tools in life, it comes with constraints and limitations. If we simply programming “in” the language, we are guaranteed to be bound by the limitations of the language and get lost at implementation details.

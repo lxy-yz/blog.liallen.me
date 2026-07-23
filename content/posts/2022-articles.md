@@ -11,11 +11,11 @@ tags: []
 > **Simple** here means straightforward and containing few steps or moving pieces
 **Easy **here means requiring little effort or willpower to follow through on.
 
-![](/assets/2022-articles/01-cc48ff377d1ba043-untitled.png)
+![](../../public/assets/2022-articles/01-cc48ff377d1ba043-untitled.png)
 
-![](/assets/2022-articles/02-ee18fd25ced2939d-untitled.png)
+![](../../public/assets/2022-articles/02-ee18fd25ced2939d-untitled.png)
 
-![](/assets/2022-articles/03-d9b98f508d6e5532-untitled.png)
+![](../../public/assets/2022-articles/03-d9b98f508d6e5532-untitled.png)
 
 **The Law of Artificial Complexity**: As the number of people experiencing a problem increases, so will the artificial complexity of the solution.
   **The Law of Decomplication**: The more people that are experiencing a problem, the simpler the solution should be.
@@ -43,11 +43,11 @@ When you start acting in accordance with your intuition, you develop confidence.
 **It turns out that when I graduated from high school, I had already used up 93% of my in-person parent time. I’m now enjoying the last 5% of that time. We’re in the tail end.**
 > Embedded: bookmark
 
-![](/assets/2022-articles/04-4b62c3c17d06d3b1-untitled.png)
+![](../../public/assets/2022-articles/04-4b62c3c17d06d3b1-untitled.png)
 
-![](/assets/2022-articles/05-969412b8d2ee705d-untitled.png)
+![](../../public/assets/2022-articles/05-969412b8d2ee705d-untitled.png)
 
-![](/assets/2022-articles/06-d568d9a5ff39e6c1-untitled.png)
+![](../../public/assets/2022-articles/06-d568d9a5ff39e6c1-untitled.png)
 
 > Embedded: bookmark
 > 有时候我们之所以痛苦，是因为我们认同一个观念，却又在做着与之相反的事。这种时候要么需要改变我们所做的事情，要么需要更新我们的观念。

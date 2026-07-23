@@ -37,8 +37,8 @@ Let us compare
 In fact they are semantically similar, but the former results a hierarchy of nested component only for styling purpose while the latter is simply a div with all the classes. Component hierarchy does nothing help for editing or debugging experience. Consider every update of styles, you need to wrap/unwrap existing component with other components against simply append/remove classes. The difference between amount of effort could be trivial only if you don’t  need to tweak the styles often to get it look alright. Things adds up quickly.
 ### Conclusion
 
-![Before](/assets/bad-tool-traps-you-good-tool-empowers-you/01-a0018d4a944195c0-untitled.png)
+![Before](../../public/assets/bad-tool-traps-you-good-tool-empowers-you/01-a0018d4a944195c0-untitled.png)
 
-![After](/assets/bad-tool-traps-you-good-tool-empowers-you/02-121caf0ba9611ab7-untitled.png)
+![After](../../public/assets/bad-tool-traps-you-good-tool-empowers-you/02-121caf0ba9611ab7-untitled.png)
 
 With less time spend on thinking about **how** to work with the css in js library in an idiomatic way and more time on **what** the UI should look like (and only use the tool as a mean to achieve it) instead, we get a broader picture when building products. I would not say picture on the right is much better than the one on the left, both sucks more or less. But it is clear that the right handed one has taken more design thoughts into it, which is gained by spending less time fighting with the tool.

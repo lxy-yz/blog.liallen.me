@@ -7,8 +7,6 @@ updated: 1743485520000
 description: "“If you’re not paying for the product, you are the product.”"
 tags: []
 ---
-> Embedded: tweet
-
 有个标新立异的公司搞了个自动贩卖机，说是为员工谋福利。既然是福利总不能收费，但又不想落入俗套，于是就整了个有趣的规则。
 
 规则如下

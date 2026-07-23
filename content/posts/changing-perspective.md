@@ -39,6 +39,6 @@ And the changing in perspective works great. Instead of looking at the [“Is th
 
 It helps me to avoid the tendency to optimize for a [local maxima](https://cdixon.org/2009/09/19/climbing-the-wrong-hill/) (specific to the problem that I’m facing) while shifting focus to a higher level, taking the entire team’s merit into account.
 
-It’s rare for people in corporate settings to have the drive to improve things and to [see things as what can be instead of what it is](/e377883774264ea5b2ac789c77ccb4cb?pvs=25). It’s both encouraging and crucial to have the foundational work being laid out first so that more improvements and contributions can arise.
+It’s rare for people in corporate settings to have the drive to improve things and to [see things as what can be instead of what it is](./compromise-isn-t-indifference.md). It’s both encouraging and crucial to have the foundational work being laid out first so that more improvements and contributions can arise.
 
 It’s the practice of [good enough software](https://en.wikipedia.org/wiki/Principle_of_good_enough). Therefore, any reason not to embrace it?

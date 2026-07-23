@@ -12,7 +12,7 @@ tags: []
 发现改变习惯确实不容易，但方法合适的话是可以做到的。举一个朋友的[例子](https://weichen.blog/weight/)，他通过优化饮食，在并不超重的情况下，仅仅一年就减轻十几公斤。
 ## 什么是习惯？
 我的理解是习惯是**无意识**的**重复性**行为。具体一点说，是一个由**环境**触发，导致行为的重复，并最终由**奖惩**机制来不断巩固强化的**反馈回路**
-![图片源自 [https://habitica.fandom.com/wiki/The_Habit_Loop](https://habitica.fandom.com/wiki/The_Habit_Loop)](/assets/ru-he-gai-bian-xi-guan/01-aeae84917a6c3d41-untitled.png)
+![图片源自 [https://habitica.fandom.com/wiki/The_Habit_Loop](https://habitica.fandom.com/wiki/The_Habit_Loop)](../../public/assets/ru-he-gai-bian-xi-guan/01-aeae84917a6c3d41-untitled.png)
 ## 如何改变？
 根据弗洛伊德的冰山模型，改变的关键在于让无意识的冰山浮出水面，成为意识的一部分。换句话说，就是要找到行为重复的**原因**。
 

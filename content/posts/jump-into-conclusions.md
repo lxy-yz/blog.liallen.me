@@ -13,7 +13,7 @@ I was recently poking around with [SvelteKit](https://kit.svelte.dev/) to build 
 
 My initial reaction, soon after reading the title (w/o reading), was like “Huh? Isn’t it a common sense that both Svelte and React are amazing front-end frameworks that are capable of building awesome sites **AND** apps??”.
 
-![](/assets/jump-into-conclusions/01-bfa84ef36189e081-untitled.png)
+![](../../public/assets/jump-into-conclusions/01-bfa84ef36189e081-untitled.png)
 
 However, there is a thing called [jumping conclusion bias](https://en.wikipedia.org/wiki/Jumping_to_conclusions).
 

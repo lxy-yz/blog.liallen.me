@@ -9,7 +9,7 @@ tags: ["Belief","Career"]
 ---
 I used to like helping new team members with their onboarding process, partly because I've gone through the same thing before, so I know some of the pain points that they’re likely to encounter.  In addition to that, it's also a good chance to have a fresh eye to spot some ["broken windows"](https://en.wikipedia.org/wiki/Broken_windows_theory) of the team that have long been ignored.
 
-Guess I don’t consider my enthusiasm as a bad thing, at least not until I became the designated mentor of interns three times in a row in my [last job](/2216126372c749d5bc5745bfc1fa593a?pvs=25).
+Guess I don’t consider my enthusiasm as a bad thing, at least not until I became the designated mentor of interns three times in a row in my [last job](./my-pip-experience.md).
 
 Learn from the past experience, I decide to make some adjustments to my work routines. More specifically, I choose to engage less with instant messages or emails. **Instead of replying "now", I default to replying "later"**.
 
@@ -21,9 +21,9 @@ There're actually very few questions need my presence at all, consider I am not 
 
 First, It ensures diligent research have been done. Better question leads to better answers while bad question just creates endless rabbit holes. Compare the following search result
 
-![](/assets/be-a-bit-unhelpful/01-aa221021b0140ae1-untitled.png)
+![](../../public/assets/be-a-bit-unhelpful/01-aa221021b0140ae1-untitled.png)
 
-![](/assets/be-a-bit-unhelpful/02-512e17a85a8592e8-untitled.png)
+![](../../public/assets/be-a-bit-unhelpful/02-512e17a85a8592e8-untitled.png)
 
 Modern search engines are insanely powerful that it’s literally impossible to not have answers for questions that are stated correctly. That being said, the quality of question does matter a lot, [How To Ask Questions The Smart Way](https://github.com/selfteaching/How-To-Ask-Questions-The-Smart-Way) has detailed guidance on this.
 

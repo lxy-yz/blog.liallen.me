@@ -73,7 +73,7 @@ addRecordToDatabase();
 Note: the interesting part is how ChatGPT automatically inferred the value of notion database properties `type`, `created` and `read?`, it’s not always **accurate, **check it twice!
 ### Diagram
 By greying out the ChatGPT part, It’s as if Notion can understand natural languages that ChatGPT is capable of interpreting.
-![](/assets/talk-to-chatgpt-in-bdd/01-89d64dbdc271c9f4-untitled.png)
+![](../../public/assets/talk-to-chatgpt-in-bdd/01-89d64dbdc271c9f4-untitled.png)
 ## What’s next
 It should be obvious that the ability of GPT-3 (underlying AI model) to take unstructured input and convert it to functional output isn’t limit to Notion API. It’s an indicator that the tedious low-level task of figuring out how to glue services with different API specs can be delegated to AI, which further unleashes programmers productivity and creativity.
 

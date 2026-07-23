@@ -7,7 +7,7 @@ updated: 1783953000000
 description: "骑行随笔：江苏到贵州的3个月骑行"
 tags: ["On the road","Introduction"]
 ---
-![](/assets/ji-xing-shan-he/01-0a510b02b27c5171-img_2980.jpeg)
+![](../../public/assets/ji-xing-shan-he/01-0a510b02b27c5171-img_2980.jpeg)
 
 **出发**
 2025.12.7**， **扬州
@@ -16,9 +16,9 @@ tags: ["On the road","Introduction"]
 路在何方？
 脚下，心上。
 
-[山路夜骑](/posts/shan-lu-ye-qi)
-[雨夜巷粥](/posts/yu-ye-xiang-zhou)
-[回笼觉](/posts/hui-long-jue)
+[山路夜骑](./shan-lu-ye-qi.md)
+[雨夜巷粥](./yu-ye-xiang-zhou.md)
+[回笼觉](./hui-long-jue.md)
 
 **虽迟但到**
 元旦后周末，铅山
@@ -69,7 +69,7 @@ tags: ["On the road","Introduction"]
 苏博纳金汤。
 
 **秋畦**
-![](/assets/ji-xing-shan-he/02-08852e7876020f24-image.png)
+![](../../public/assets/ji-xing-shan-he/02-08852e7876020f24-image.png)
 田畦采油绿
 秋塘抹腮红
 野犬逐生客
@@ -107,4 +107,4 @@ tags: ["On the road","Introduction"]
 谁家游子不断肠？
 蜉蝣遇残阳。
 
-![](/assets/ji-xing-shan-he/03-f2a46fb2ff03c777-img_2967.jpg)
+![](../../public/assets/ji-xing-shan-he/03-f2a46fb2ff03c777-img_2967.jpg)

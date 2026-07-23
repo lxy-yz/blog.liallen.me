@@ -8,7 +8,7 @@ description: ""
 tags: ["web frontend"]
 ---
 
-> I talked about my mental model about state management in React in previous [post](/950ecc18d4f84e0f8e83a71c356acc56?pvs=25), this post is an implementation about that.
+> I talked about my mental model about state management in React in previous [post](./state-management-in-react.md), this post is an implementation about that.
 
 ## TL;DR
 1. `npm install unstated-next immer use-immer`

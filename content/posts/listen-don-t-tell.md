@@ -25,7 +25,7 @@ Based on Maslow's Hierarchy of Needs, once basic survival and social needs are m
 
     How do you figure out what food, music, or sports you like? You're not born with a manual that clearly outlines your preferences. We're more like an empty hard drive, waiting to be filled with data from our environment. This data comes from our interactions with people around us. It forms a social circle, with family at the center and expanding to friends, community, and society.
 
-![](/assets/listen-don-t-tell/01-a66424c1bb48f619-group_22.png)
+![](../../public/assets/listen-don-t-tell/01-a66424c1bb48f619-group_22.png)
 
 The closer our relationships are, the more they influence and shape us. It's not just about genetic resemblance; our habits and beliefs are shaped by our parents, environment, and culture. To really know what we like, we need to try enough of what we don't like to find the right fit, rather than blindly accepting what others tell us.
 

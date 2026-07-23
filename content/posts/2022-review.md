@@ -32,13 +32,13 @@ I used to be a layback (a polite way of saying being lazy) guy. The idea of mana
 
 Not to say I’m immune to peer pressure, it just seems that those things aren’t important enough for me to give too much [fuck](https://www.amazon.com/gp/product/B019MMUA8S) about. Until I came across “[Time as a friend](https://github.com/xiaolai/time-as-a-friend)” in recent year, I start to realize that I barely know anything about time.
 
-There’re a few other articles reshaped my understanding about it and I've included them in the[2022 articles](/posts/2022-articles). I’m far from being able to manage it well, but the importance of it really shouldn’t be emphasized, “until we can manage time we can manage nothing else” borrowing it from the management guru Peter Drucker.
+There’re a few other articles reshaped my understanding about it and I've included them in the[2022 articles](./2022-articles.md). I’m far from being able to manage it well, but the importance of it really shouldn’t be emphasized, “until we can manage time we can manage nothing else” borrowing it from the management guru Peter Drucker.
 
 ## Habits
 
 ### A non-negotiable contract
 
-I participated in the [SF 10k race](/posts/sf-10k-race) and I really loved the experience!
+I participated in the [SF 10k race](./sf-10k-race.md) and I really loved the experience!
 
 Not because it’s hard, it’s not a marathon and most people can do (and actually did) it without practice. But there’s a hidden story, I made a **contract** with myself while listening to the [Atomic Habits](https://www.amazon.com/s/?ie=UTF8&keywords=atomic+habits+an+easy&tag=googhydr-20&index=aps&hvadid=410004477119&hvpos=&hvnetw=g&hvrand=3681101632110328047&hvpone=&hvptwo=&hvqmt=e&hvdev=t&hvdvcmdl=&hvlocint=&hvlocphy=1027627&hvtargid=kwd-679783660480&ref=pd_sl_2luhfonj37_e&hydadcr=19140_11277061&gclid=CjwKCAiA5Y6eBhAbEiwA_2ZWIRathVmWHoM2sJmjWmCSNGn-wguEVfPDtioM8mwzyeKEuqGX9vxUFRoCUpQQAvD_BwE) audiobook to build a new habit only to prove to myself that I can do it.
 
@@ -52,7 +52,7 @@ The deal I made with myself is definite and reachable, except negotiable. The bi
 
 Reading shouldn’t be optional, whether it’s for fun or for learning. There’re a ton of stupid mistakes I’ve made that could be avoided by learning from the experiences and wisdoms of others distilled into good books, or at least substituted by some less stupid ones.
 
-It’s much better to feel ashamed about our ignorance while reading than to regret in hindsight with all the what-ifs. I don’t read books (🤦) until I came across [The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/) following the advice of [Learn the basics well](/posts/learn-the-basics-well), I was surprised to find that it’s 100x better than most of the Internet junk food (e.g. this blog). So I made reading books a habit this year and I’m following Shane Parish’s rule of “I don’t worry about any money spent on books”. [This](https://zlib.liallen.me) may help if you use zlibrary.
+It’s much better to feel ashamed about our ignorance while reading than to regret in hindsight with all the what-ifs. I don’t read books (🤦) until I came across [The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/) following the advice of [Learn the basics well](./learn-the-basics-well.md), I was surprised to find that it’s 100x better than most of the Internet junk food (e.g. this blog). So I made reading books a habit this year and I’m following Shane Parish’s rule of “I don’t worry about any money spent on books”. [This](https://zlib.liallen.me) may help if you use zlibrary.
 
 [Principles](https://www.amazon.com/Principles-Ray-Dalio-audiobook/dp/B074B2CZJG) is one of best books I read this year, I only finished its Life Principle section, but it has an immediate impact on me as I start collecting my own principles. One important takeaway I’ve got from it is that **ego** and **blind spots** are two barriers that will prevent us from achieving anything great in life, it resonates so deeply with me that I put two sticky notes (“[Ego is the Enemy](https://www.amazon.com/Ego-Enemy-Ryan-Holiday/dp/1591847818)” and “[Be Water](https://en.wikipedia.org/wiki/Be_Water)”) on my Mac as a daily reminder. Although I’m not sure if it has made any difference or not.
 
@@ -60,7 +60,7 @@ It’s much better to feel ashamed about our ignorance while reading than to reg
 
 linked page is the first page of this blog because I love the [idea](https://nownownow.com/about) behind it (again thanks Derek!).
 
-I didn’t have a writing habit of any form, no diary, no journaling, no whatever. Look at the very first [Post](/18df1676d1904a979e3d55807508e6c1?pvs=25), it’s merely a few scattered thoughts on the latest frontend (web) tools. Then there’s the the [takeaway](/2216126372c749d5bc5745bfc1fa593a?pvs=25) I had on my last job, which I want to keep a record as reminder. The rest are just a few small [experiments](/601313f87dfb4147b0738e1e50ca67cc?pvs=25) that I run from time to time, as I’m finally convinced that if I don’t hold myself accountable in changing bad habits that don’t work, I’d only end up in the same bad situation again the next year.
+I didn’t have a writing habit of any form, no diary, no journaling, no whatever. Look at the very first [Post](./state-of-modern-web.md), it’s merely a few scattered thoughts on the latest frontend (web) tools. Then there’s the the [takeaway](./my-pip-experience.md) I had on my last job, which I want to keep a record as reminder. The rest are just a few small [experiments](./100-thing-challenge.md) that I run from time to time, as I’m finally convinced that if I don’t hold myself accountable in changing bad habits that don’t work, I’d only end up in the same bad situation again the next year.
 
 Probably the biggest benefit for me is that writing helps **clear thinking** a lot. Not until I type my thoughts into words do I notice my thinking is a mess. It’s too easy to get distracted by small talks in random conversations while ignoring the importance of common sense and logic. Writing makes fallacies in thinking hard to hide.
 
@@ -72,7 +72,7 @@ It’s a new habit and I still feel that I know nothing about it after a couple 
 
 I can’t explain the neurological effects it has done to our brain but I know what a busy mind was like. I’ve heard about people’s frustration about how hard it’s to focus during the practice, I’m having the same issue besides I tend to think that’s probably a good reason we’re doing this in the first place.
 
-I’m not attached to the outcome as well, I’m merely curious to explore and understand myself better. I started learning about the topic from an [introductory book](https://www.amazon.com/Get-Some-Headspace-Mindfulness-Minutes-ebook/dp/B006ZL1KAW/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1673595527&sr=1-1) by Andy, along with his Headspace App (lovely animations) to learn the basics. After a few months of trial, I discovered a [good deal](/1dbfa4cd814940aa99b047e8d4673270?pvs=25) on another meditation App by Sam Harris.
+I’m not attached to the outcome as well, I’m merely curious to explore and understand myself better. I started learning about the topic from an [introductory book](https://www.amazon.com/Get-Some-Headspace-Mindfulness-Minutes-ebook/dp/B006ZL1KAW/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1673595527&sr=1-1) by Andy, along with his Headspace App (lovely animations) to learn the basics. After a few months of trial, I discovered a [good deal](./waking-up-membership.md) on another meditation App by Sam Harris.
 
 Have a calmer mind is essential for cultivating better self awareness and meditation has some magic on that.
 
@@ -98,13 +98,13 @@ We all know that social media and smartphone apps are addictive, the iOS screen 
 
 [Hooked](https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788) by Nir Eyal is an eye-opening read on this topic, it well demystifies some of the black magic and [dark patterns](https://en.wikipedia.org/wiki/Dark_pattern) behind the trillion dollar enterprise [business](https://en.wikipedia.org/wiki/Attention_economy).
 
-Another book which focuses more on practical solutions to the problem is [Digital Minimalism](https://www.amazon.com/gp/product/B07DBRBP7G) by Cal Newport. I did a[One week digital decluttering](/posts/one-week-digital-decluttering) experiment after reading that, and I think it’s a good mindfulness exercise for our digital habits.
+Another book which focuses more on practical solutions to the problem is [Digital Minimalism](https://www.amazon.com/gp/product/B07DBRBP7G) by Cal Newport. I did a[One week digital decluttering](./one-week-digital-decluttering.md) experiment after reading that, and I think it’s a good mindfulness exercise for our digital habits.
 
 It’s neither black or white, but I find it helpful to **keep social media at a right distance**.
 
 ## Relocation
 
-I left SF in November and I took the chance to take the[100 thing challenge](/posts/100-thing-challenge) . I was asked about why, but I don’t have a firm answer to be honest. Anything makes it a good reason to leave, there’s something else to counterbalance.
+I left SF in November and I took the chance to take the[100 thing challenge](./100-thing-challenge.md) . I was asked about why, but I don’t have a firm answer to be honest. Anything makes it a good reason to leave, there’s something else to counterbalance.
 
 One thing that I’m a bit regret is that that I’m not living up to the type of [ambition](http://www.paulgraham.com/cities.html) that Silicon Valley is known for. I do have or had the hoodies, free snacks, or other perks popularized by the Valley in TV or news. But they’re **byproducts**, not the **substance** of any great culture.
 
@@ -114,9 +114,7 @@ Airbnb has gradually become my defacto way to find a place for stay in new locat
 
 ## Work
 
-I’m working to learn and I have no interest in climbing the ladder or any kind of status game. That said, I opt out of the game of career advancement. I don’t think I’ve figured out how to do this well yet. But look at the bright side, it leaves me lots of room for improvement. A few takeaways from work that I turned into blog posts.
-
-> Embedded: Embedded database
+I’m working to learn and I have no interest in climbing the ladder or any kind of status game. That said, I opt out of the game of career advancement. I don’t think I’ve figured out how to do this well yet. But look at the bright side, it leaves me lots of room for improvement.
 
 ## Gratitude
 

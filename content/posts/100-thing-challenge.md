@@ -49,11 +49,11 @@ tags: ["Lifestyle"]
 
 2026-05-13 Clothes reduced to essentials
 2024-11-18 luggage to backpack
-2024-02-21 2 luggages → 1 luggage due to [leaving the US](/7833376a2df24d2ea876f8f0164e2a88?pvs=25)
+2024-02-21 2 luggages → 1 luggage due to [leaving the US](./why-i-left-the-us.md)
 
-![](/assets/100-thing-challenge/01-0ed252d556a57ad4-img_3784.jpg)
-![](/assets/100-thing-challenge/02-dca1e611f9b77de7-untitled.jpg)
-![All possessions that I have. Plus 1 iPhone taking the photo and 2 luggage bags](/assets/100-thing-challenge/04-6e5a51e93797349d-ai-edited-image.png)
+![](../../public/assets/100-thing-challenge/01-0ed252d556a57ad4-img_3784.jpg)
+![](../../public/assets/100-thing-challenge/02-dca1e611f9b77de7-untitled.jpg)
+![All possessions that I have. Plus 1 iPhone taking the photo and 2 luggage bags](../../public/assets/100-thing-challenge/04-6e5a51e93797349d-ai-edited-image.png)
 
 ## Background
 

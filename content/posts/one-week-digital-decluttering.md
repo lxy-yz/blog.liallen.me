@@ -34,10 +34,10 @@ There’re some prep work to be done so that our sudden change won’t affect ot
 ### Home Screen
 
     Before {color="gray_bg"}
-![](/assets/one-week-digital-decluttering/01-0d6f54dff4f55505-untitled.png)
+![](../../public/assets/one-week-digital-decluttering/01-0d6f54dff4f55505-untitled.png)
 
     After  {color="gray_bg"}
-![](/assets/one-week-digital-decluttering/02-a66263430299a01b-untitled.png)
+![](../../public/assets/one-week-digital-decluttering/02-a66263430299a01b-untitled.png)
 
 ### Screen Time
 

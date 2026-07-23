@@ -25,17 +25,17 @@ Below is the instruction plus a history of my attempts.
 ![](https://raw.githubusercontent.com/lxy-yz/static-files/main/run.png)
 
 **Attempt #1**
-![](/assets/my-ai-avatar/03-c7df1347203c0b72-lxynox_simple_avatar_pixar_3d_rendering_longer_hair_white_glass_51f18d5d-1b83-42.png)
+![](../../public/assets/my-ai-avatar/03-c7df1347203c0b72-lxynox_simple_avatar_pixar_3d_rendering_longer_hair_white_glass_51f18d5d-1b83-42.png)
 Prompt
 `/imagine `[`https://s.mj.run/3WChKVc1swk`](https://s.mj.run/3WChKVc1swk)` simple avatar, pixar, 3d rendering, longer hair, white glass, --s 500 --v 5 --iw 2`
 
 **Attempt #2**
-![](/assets/my-ai-avatar/04-47c79cf69f82233f-lxynox_simple_avatar_pixar_3d_rendering_longer_hair_white_glass_9201ae03-e841-46.png)
+![](../../public/assets/my-ai-avatar/04-47c79cf69f82233f-lxynox_simple_avatar_pixar_3d_rendering_longer_hair_white_glass_9201ae03-e841-46.png)
 Prompt
 `/imagine `[`https://s.mj.run/3WChKVc1swk`](https://s.mj.run/3WChKVc1swk)` simple avatar, pixar, 3d rendering, longer hair, white glass, --s 500 --v 5 --iw 2`
 
 **Attempt #3**
-![](/assets/my-ai-avatar/05-a38851dfb7ce58d0-lxynox_simple_avatar_pixar_3d_rendering_longer_hair_smiley_face_1587edd0-c824-43.png)
+![](../../public/assets/my-ai-avatar/05-a38851dfb7ce58d0-lxynox_simple_avatar_pixar_3d_rendering_longer_hair_smiley_face_1587edd0-c824-43.png)
 Prompt
 `/imagine `[`https://s.mj.run/3WChKVc1swk`](https://s.mj.run/3WChKVc1swk)` simple avatar, pixar, 3d rendering, longer hair, smiley face, --s 800 --v 5 --iw 1`
 

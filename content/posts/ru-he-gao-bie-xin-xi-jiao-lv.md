@@ -7,7 +7,7 @@ updated: 1725510000000
 description: "这世界不存在信息过载，只有过滤失败。— Clay shirky"
 tags: []
 ---
-![](/assets/ru-he-gao-bie-xin-xi-jiao-lv/01-3dd33fdcd1bdcc0c-untitled.png)
+![](../../public/assets/ru-he-gao-bie-xin-xi-jiao-lv/01-3dd33fdcd1bdcc0c-untitled.png)
 现代人难以想象，纽约时报一周的篇幅，就足以比肩18世纪时巴黎中产阶级家庭一生的阅读量。信息的丰盛却也成了信息的灾难 — 网络昼夜不停地用新奇和焦虑喂养我们，让人成为食知动物。
 ## [**信息即食物**](https://www.ted.com/talks/jp_rangaswami_information_is_food?language=zh-cn)
 我们和食物健康的关系，同计算机程序一样，遵循着[garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out) 的准则。因此，我们应像对待食物一样对待信息，不只是囫囵吞枣的摄入（收集信息），还应该用特定的方法烹饪、享用（处理信息），并反复咀嚼、品尝（消化吸收），才能够感受到最佳的美味（发挥信息的最佳效用）。

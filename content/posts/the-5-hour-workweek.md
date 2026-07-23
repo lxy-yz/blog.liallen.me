@@ -39,4 +39,4 @@ There’s still a long way to go, and the path ahead becomes more pathless than 
 
 Cheers, the 5-hour workweek.
 
-相关：[Slow down](/posts/slow-down)
+相关：[Slow down](./slow-down.md)

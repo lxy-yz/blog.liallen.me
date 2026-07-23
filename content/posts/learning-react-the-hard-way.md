@@ -13,7 +13,7 @@ Virtual DOM isn’t fast
 React isn’t all about JavaScript
 Context API isn’t unsafe
 UI library isn’t client side only
-[New PHP or the Future](/posts/new-php-or-the-future)
+[New PHP or the Future](./new-php-or-the-future.md)
 ---
 I thought React would be as **react****ive** as its name, but it is not.
 ### JSX

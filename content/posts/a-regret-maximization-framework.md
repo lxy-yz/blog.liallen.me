@@ -7,7 +7,6 @@ updated: 1782516720000
 description: "How to be regretful for software engineers"
 tags: ["Essays"]
 ---
-
 ## TL;DR
 My **regret maximization** recipe
 - Specializing prematurely by going with the flow

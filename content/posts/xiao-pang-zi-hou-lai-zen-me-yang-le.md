@@ -9,9 +9,9 @@ tags: []
 ---
 我们从一组照片开始吧。
 
-![高中时期身份证头像](/assets/xiao-pang-zi-hou-lai-zen-me-yang-le/01-e3d26b505d7693f3-img_2680.jpeg)
+![高中时期身份证头像](../../public/assets/xiao-pang-zi-hou-lai-zen-me-yang-le/01-e3d26b505d7693f3-img_2680.jpeg)
 
-![23年SF参加半马](/assets/xiao-pang-zi-hou-lai-zen-me-yang-le/02-1a1fe0b9b99ccaa7-img_2854.png)
+![23年SF参加半马](../../public/assets/xiao-pang-zi-hou-lai-zen-me-yang-le/02-1a1fe0b9b99ccaa7-img_2854.png)
 
 认识我的人都知道我从小就是个胖子，周围的人都乐此不疲给我起各种各样的外号，我也总是表现出无所谓的态度，可事实果真如此吗？
 相信所有人都照过镜子，但如何知道自己照的不是哈哈镜，显微镜，望远镜，滤镜而是一个真实的镜子呢，有个办法是通过别人的镜子看自己。

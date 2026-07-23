@@ -46,10 +46,10 @@ And more importantly, it strengthens my mind muscles to make me feel proud and c
 ## Medias
 > Embedded: Embedded video
 
-![](/assets/sf-10k-race/01-5c11f19bff466b68-0e461092-ee80-4186-92dd-6befdf5db2c7.jpeg)
+![](../../public/assets/sf-10k-race/01-5c11f19bff466b68-0e461092-ee80-4186-92dd-6befdf5db2c7.jpeg)
 
-![](/assets/sf-10k-race/02-07197515308f4fdc-38ab2a34-737b-4624-90cd-69f40379669e.jpeg)
+![](../../public/assets/sf-10k-race/02-07197515308f4fdc-38ab2a34-737b-4624-90cd-69f40379669e.jpeg)
 
-![](/assets/sf-10k-race/03-07ea30d2a20995f5-fd0e789a-4c47-4de4-be40-8b76f713c8ab.jpeg)
+![](../../public/assets/sf-10k-race/03-07ea30d2a20995f5-fd0e789a-4c47-4de4-be40-8b76f713c8ab.jpeg)
 
-![](/assets/sf-10k-race/04-143217d539a4ea00-0dd18ed4-8a90-4a5f-9d96-b56f011bede4.jpeg)
+![](../../public/assets/sf-10k-race/04-143217d539a4ea00-0dd18ed4-8a90-4a5f-9d96-b56f011bede4.jpeg)

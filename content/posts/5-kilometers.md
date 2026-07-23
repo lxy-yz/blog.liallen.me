@@ -7,7 +7,6 @@ updated: 1783955160000
 description: ""
 tags: ["Introduction"]
 ---
-
 ## I
 
 Rewind to 2000.
@@ -49,4 +48,4 @@ And again.
 Tomorrow.
 5 kilometers.
 
-相关：[Who stole my pace?](/posts/who-stole-my-pace)
+相关：[Who stole my pace?](./who-stole-my-pace)

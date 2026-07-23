@@ -24,5 +24,5 @@ tags: []
 说到底还是抬头看路和低头走路的问题，一味抬头看不走，就会原地踏步，这个容易发现和避免。一味低头走而不抬头，就会掉进前方早就挖好的坑，至于爬不爬得出来就看造化了。
 
 ---
-相关
-- [https://cdixon.org/2009/09/19/climbing-the-wrong-hill](https://cdixon.org/2009/09/19/climbing-the-wrong-hill)
+
+相关 [https://cdixon.org/2009/09/19/climbing-the-wrong-hill](https://cdixon.org/2009/09/19/climbing-the-wrong-hill)

@@ -32,4 +32,4 @@ tags: ["Introduction","Fragments"]
 独自坐在路边发呆
 ---
 
-相关：[四季](/posts/si-ji)
+相关：[四季](./si-ji.md)

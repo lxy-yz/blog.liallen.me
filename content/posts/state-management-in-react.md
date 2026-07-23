@@ -7,7 +7,7 @@ updated: 1778947080000
 description: ""
 tags: ["Technology"]
 ---
-As someone who's been hit by the [JS fatigue](/0a391bef447149e9acd1f302a25eb9b2?pvs=25) long time ago, I’m trying to keep myself away from off-topic debate between things like `Redux`, `React.Context`.
+As someone who's been hit by the [JS fatigue](./learning-react-the-hard-way.md) long time ago, I’m trying to keep myself away from off-topic debate between things like `Redux`, `React.Context`.
 However, from time to time, I'll still see people mention stuff like [Redux Toolkit](https://redux-toolkit.js.org/). I'll share my 2 cents about state management in React/front-end space so that I don’t repeat myself.
 
 I personally find that there're a lot of nuances — the cliche that "it depends". In fact, it ***is*** tight to the specific application since tools are more context dependent than craft.

@@ -11,9 +11,9 @@ tags: ["Belief"]
 
 Imagine breaking an eight-hour workday into two equal parts, namely coding and meeting with four hours for each. Also taking into account our poor perception of time by safely allocating an additional hour for each part to be completed in reality. There're two different ways of spending of our time.
 
-![Coding first, meeting second](/assets/the-busy-bubble/01-89c2629117d75343-untitled.png)
+![Coding first, meeting second](../../public/assets/the-busy-bubble/01-89c2629117d75343-untitled.png)
 
-![Meeting first, coding second](/assets/the-busy-bubble/02-4676532be3a0f87f-untitled.png)
+![Meeting first, coding second](../../public/assets/the-busy-bubble/02-4676532be3a0f87f-untitled.png)
 
 One way we can do is **meeting first, coding second**. We'll finish the meeting part of the day, owing an hour of debt for the coding part. I'll be really upset in this case. Many reason can account for this, maybe there's a deadline for the coding task, or the meetings make me feel counterproductive, or I solely want to get some real shit done. Whatever the reason is, I'll leave the workday feeling really busy.
 
