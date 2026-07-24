@@ -7,7 +7,6 @@ updated: 1778907000000
 description: ""
 tags: ["Lifestyle"]
 ---
-
 **I have (~20 things)**
 
 | Quantity |               Item                |

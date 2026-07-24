@@ -7,8 +7,7 @@ updated: 1778859900000
 description: "We don’t learn then start, we start then learn."
 tags: ["Mindset"]
 ---
-> The first principle is that you must not fool yourself and you are the easiest person to fool.
-- Richard P. Feynman
+> The first principle is that you must not fool yourself and you are the easiest person to fool. -Richard P. Feynman
 
 The notion that “I’ll do X, once Y.“ is a pervasive lie.
 

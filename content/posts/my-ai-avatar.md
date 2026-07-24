@@ -16,13 +16,7 @@ The good news is that everyone can make their own version of it within 30 minute
 Below is the instruction plus a history of my attempts.
 1. Choose the image and make it publicly accessible
 2. Write the [prompt](https://docs.midjourney.com/docs/parameter-list)
-  > To add images to a prompt, type or paste the web address where the image is stored online. The address must end in an extension like .png, .gif, or .jpg. After adding image addresses, add any additional text and parameters to complete the prompt.
-![](https://cdn.document360.io/3040c2b6-fead-4744-a3a9-d56d621c6c7e/Images/Documentation/MJ%20Prompt.png)
 3. Repeat 2 to tune the prompt until you’re happy with the result
-
-    The image I selected is the same as what I’ve for my personal [website](https://liallen.me), with a shortened URL at [`https://s.mj.run/3WChKVc1swk`](https://s.mj.run/3WChKVc1swk).
-
-![](https://raw.githubusercontent.com/lxy-yz/static-files/main/run.png)
 
 **Attempt #1**
 ![](../../public/assets/my-ai-avatar/03-c7df1347203c0b72-lxynox_simple_avatar_pixar_3d_rendering_longer_hair_white_glass_51f18d5d-1b83-42.png)

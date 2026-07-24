@@ -9,18 +9,18 @@ tags: []
 ---
 There’re many great mental tools for making decisions or solving problems. The decision matrix (a.k.a. the [Eisenhower Matrix](https://en.wikipedia.org/wiki/Time_management#The_Eisenhower_Method)) is one of them, if not the most popular one.
 
-    There’re a ton of articles writing about it on the Internet, and it looks simple. But from my own experience, it is not an easy task for many people including me to distinguish the difference between urgency and importance. Otherwise there won’t be so many busy minds hurrying to getting more things done rather than focusing on stuff that actually moves the needle.
+There’re a ton of articles writing about it on the Internet, and it looks simple. But from my own experience, it is not an easy task for many people including me to distinguish the difference between urgency and importance. Otherwise there won’t be so many busy minds hurrying to getting more things done rather than focusing on stuff that actually moves the needle.
 
-    To make real use out of it, there’s a hidden premise that better judgment needs to be developed, so that we can associate different tasks with the right matrix. And there’s no replacement for experiences and trial and errors when it comes to forming good judgement.
+To make real use out of it, there’s a hidden premise that better judgment needs to be developed, so that we can associate different tasks with the right matrix. And there’s no replacement for experiences and trial and errors when it comes to forming good judgement.
 
 ![](../../public/assets/asking-questions-to-solve-problems/01-12754bb950cbc148-untitled.png)
 
 The way that works better for me is by **asking questions**, inspired by reading a [great article ](https://humanwhocodes.com/blog/2020/02/how-i-think-about-solving-problems/)from Nicholas C. Zakas. By going through a list of 5 questions in order, it gives me better mental clarity on what actions to take based on what type of problem I’m dealing with.
 
 Here are the 5 questions that I extracted from the article, listed in the right order
-`details`
-#### Is this really a problem?  (i.e. consequential or not)
-  > I’ll define a problem as anything that leads to an objectively undesirable outcome if not addressed
+
+Is this really a problem?  (i.e. consequential or not)
+>I’ll define a problem as anything that leads to an objectively undesirable outcome if not addressed
 
 **When in a leadership role, it’s common to receive complaints that sound like problems but are just opinions
 **I ask these software engineers this question: is it a problem or is it just different? In many cases “wrong” just means “not what I’m used to or prefer.” If you can identify that a reported problem is not, in fact, a problem, then you no longer need to spend resources on a solution
@@ -28,6 +28,8 @@ Here are the 5 questions that I extracted from the article, listed in the right 
 `details`
 #### Does the problem need to be solved?  (i.e. tolerable or not)
   > A problem doesn’t need to be solved if the undesirable outcome is tolerable and either constant or slow growing
+  
+  
 Another way to ask this question is, “what happens if the problem is never solved?” If the answer is, “not much,” then it might be okay to not solve the problem.
 
 `details`

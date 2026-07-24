@@ -31,7 +31,7 @@ But why do I choose to give it a reason?
 Probably because of my ego. 
 No one cares about why it's bad, just the same as no one cares about how you look besides yourself. 
 
-As an [article](https://weichen.blog/beginning/#%e5%86%99%e6%8e%89%e8%87%aa%e5%b7%b1%e7%9a%84-ego) from [Weichen](https://weichen.blog/starting/) recommends:
+As an [article](https://weichen.blog/beginning/#%e5%86%99%e6%8e%89%e8%87%aa%e5%b7%b1%e7%9a%84-ego) from [weichen](https://weichen.blog/starting/) recommends:
 > If it’s our soul that we’re talking about (rather than just What We Write), then our passage through the varying disciplines of this life, if we’re truly paying attention, is an education in editing out the ego, in stepping away from our fear and self-concern and aspirations for recognition, for material rewards, and for earthly payoffs, until we move into the realm of the gift, where what we offer is for the reader’s good and not our own.
 
 Ultimately, I think the key difference lies at if there's an intent to make it better though.

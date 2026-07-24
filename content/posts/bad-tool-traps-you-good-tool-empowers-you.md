@@ -17,9 +17,9 @@ When working with websites, the goal is to make things look alright. It should b
 
 Style needs tweaking. Unless you are a true expert, most of us start from inspecting style rules (css) in browsers with a lot of “guesswork” plus “googling” to get things look fine. No matter how good component (e.g. react) props resembles css rules they are still one level of abstraction sits on top of *standard* css. And you don't have the same live editing experience when working with components compared to making changes in browser on the fly, hot reloading is cool but it is not nearly as reliable. However, I am not gonna focus on analyzing on the tradeoffs of css-in-js, there are a ton of articles online already and I am surely not an expert on the topic, I will pick one aspect that is not mentioned quite often, which is many css-in-js libraries are usually unnecessarily verbose.
 
-Let us compare
+Let us compare:
 
-    ```xml
+```xml
 `<Box borderWidth={1}>`
   `<Spacer margin={4}>`
     `<Flex display="flex">`
@@ -28,11 +28,13 @@ Let us compare
     `<Flex>`
   `<Spacer>`
 `<Box>`
-    ```
+```
 
-    ```html
-`<div class="border m-4 flex text-sm"></div>`
-    ```
+vs
+
+```html
+<div class="border m-4 flex text-sm"></div>
+```
 
 In fact they are semantically similar, but the former results a hierarchy of nested component only for styling purpose while the latter is simply a div with all the classes. Component hierarchy does nothing help for editing or debugging experience. Consider every update of styles, you need to wrap/unwrap existing component with other components against simply append/remove classes. The difference between amount of effort could be trivial only if you don’t  need to tweak the styles often to get it look alright. Things adds up quickly.
 ### Conclusion

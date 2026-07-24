@@ -26,7 +26,10 @@ Morgan Housel shared an interesting story in his [article](https://collabfund.co
 >   - 4.8% were high intensity.
 >   The huge majority of the time was spent barely pushing themselves, almost cruising along at a leisurely pace.
 
-Quite counterintuitive, isn’t it? As someone who has done some similar training myself, I can confirm the story is true. You don’t need to be professional athletes to reap the benefits of training **strategically**. As long as you set a goal for running, say a marathon, you’ll see the best training plan is training by intervals. That’s for most of days, you run leisurely with your 5-6 effort (scale of 10). And occasionally, you go out of your comfort zone by doing a tempo run that requires a 8-9 effort. And the result is way better than you try to push yourself hard to limit everyday. You stay motivated and you even become *faster* with a stronger muscle base instead of getting injured or burned out.
+Quite counterintuitive, isn’t it? As someone who has done some similar training myself, I can confirm the story is true. 
+You don’t need to be professional athletes to reap the benefits of training **strategically**. As long as you set a goal for running, say a marathon, you’ll see the best training plan is training by intervals. 
+For most of days, you run leisurely with your 5-6 effort (scale of 10). And occasionally, you go out of your comfort zone by doing a tempo run that requires a 8-9 effort. 
+The result is way better than you try to push yourself hard to limit everyday. You stay motivated and you even become *faster* with a stronger muscle base instead of getting injured or burned out.
 
 **You’ll need rhythm to keep it going**. It’s the balance between stress and recovery. The example is everywhere, students who get the best grades aren’t the ones who put the most effort, employees who delivered the best results aren’t the ones who worked the hardest. Fast helps you get things done, slow helps you choose the right thing to do.
 

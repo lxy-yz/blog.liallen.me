@@ -25,14 +25,14 @@ devServer: {
     }
   },
 }
-
 ```
 
-### What’s the Issue
+### Issue
 The [disparity](https://12factor.net/dev-prod-parity) between dev and prod creates confusions and subtle bugs.
 
 ### Solution
 Simply remove the dev proxy and use prod url. Then the question becomes “how could prod url serving local bundle”. Short answer: [https://en.wikipedia.org/wiki/Userscript](https://en.wikipedia.org/wiki/Userscript).
+
 A glimpse of how the script may look like
 ```javascript
 document.body.innerHTML = `
@@ -65,6 +65,6 @@ function clone(node) {
   }
   return script;
 }
-
 ```
+
 Now we can simply toggling local vs prod bundle via single button click.

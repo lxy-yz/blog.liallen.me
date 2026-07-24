@@ -1,13 +1,14 @@
 ---
-id: "361f2bca-1f85-8099-bd76-ca3f758b003e"
-title: "即兴山河"
-slug: "ji-xing-shan-he"
-date: "2026-05-15"
+id: 361f2bca-1f85-8099-bd76-ca3f758b003e
+title: 即兴山河
+slug: ji-xing-shan-he
+date: 2026-05-15
 updated: 1783953000000
-description: "骑行随笔：江苏到贵州的3个月骑行"
-tags: ["On the road","Introduction"]
+description: 骑行随笔：江苏到贵州的3个月骑行
+tags:
+  - Introduction
 ---
-![](../../public/assets/ji-xing-shan-he/01-0a510b02b27c5171-img_2980.jpeg)
+![丹阳眼镜城](../../public/assets/ji-xing-shan-he/01-0a510b02b27c5171-img_2980.jpeg)
 
 **出发**
 2025.12.7**， **扬州
@@ -69,7 +70,7 @@ tags: ["On the road","Introduction"]
 苏博纳金汤。
 
 **秋畦**
-![](../../public/assets/ji-xing-shan-he/02-08852e7876020f24-image.png)
+![水牛白鹭](../../public/assets/ji-xing-shan-he/02-08852e7876020f24-image.png)
 田畦采油绿
 秋塘抹腮红
 野犬逐生客
@@ -107,4 +108,4 @@ tags: ["On the road","Introduction"]
 谁家游子不断肠？
 蜉蝣遇残阳。
 
-![](../../public/assets/ji-xing-shan-he/03-f2a46fb2ff03c777-img_2967.jpg)
+![润扬长江大桥](../../public/assets/ji-xing-shan-he/03-f2a46fb2ff03c777-img_2967.jpg)

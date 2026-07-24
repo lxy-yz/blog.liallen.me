@@ -7,7 +7,6 @@ updated: 1778859900000
 description: "A few articles that inspire me the most in 2022"
 tags: []
 ---
-> Embedded: bookmark
 > **Simple** here means straightforward and containing few steps or moving pieces
 **Easy **here means requiring little effort or willpower to follow through on.
 
@@ -28,20 +27,17 @@ tags: []
   - Choosing constructs that generate simple artifacts.
   - Simplify by encapsulation.
 
-> Embedded: bookmark
 > ***“How can you achieve your 10 year plan in the next 6 months?” —*** Peter Thiel**
 *“Until we can manage time, we can manage nothing else.” —** Peter Drucker
 **“Nothing will fill your heart with a greater sense of regret than lying on your deathbed knowing that you did not live your life and do your dreams.”  ***— Robin Sharma
 
 When you start acting in accordance with your intuition, you develop confidence. Conversely, acting against your intuition can often produce short-term dopamine, and a long-term lack of confidence.
-> Embedded: bookmark
 > **Living in the same place as the people you love matters**. I probably have 10X the time left with the people who live in my city as I do with the people who live somewhere else.
 
 **Priorities matter**. Your remaining face time with any person depends largely on where that person falls on your list of life priorities. Make sure this list is set by you—not by unconscious inertia.
 
 **Quality time matters**. If you’re in your last 10% of time with someone you love, keep that fact in the front of your mind when you’re with them and treat that time as what it actually is: precious.
 **It turns out that when I graduated from high school, I had already used up 93% of my in-person parent time. I’m now enjoying the last 5% of that time. We’re in the tail end.**
-> Embedded: bookmark
 
 ![](../../public/assets/2022-articles/04-4b62c3c17d06d3b1-untitled.png)
 
@@ -49,7 +45,6 @@ When you start acting in accordance with your intuition, you develop confidence.
 
 ![](../../public/assets/2022-articles/06-d568d9a5ff39e6c1-untitled.png)
 
-> Embedded: bookmark
 > 有时候我们之所以痛苦，是因为我们认同一个观念，却又在做着与之相反的事。这种时候要么需要改变我们所做的事情，要么需要更新我们的观念。
 > Embedded: bookmark
 > “二十五岁已死，七十五岁才埋” 这是常见的人生悲剧。
@@ -59,7 +54,6 @@ When you start acting in accordance with your intuition, you develop confidence.
 **这个问题就是：**如果所需一切条件都予以满足，你最想做的事情是什么？
 什么是自己不想要的？什么是自己想要的？这完全是两个问题，难度系数有天壤之别。**
 
-> Embedded: bookmark
 > An **antifragile** way of life is all about finding a way to gain from the **inevitable disorder** of life. To not only bounce back when things don’t go as planned, but to get stronger, smarter, and better at continuing as a result of running into this disorder.
 
 **Goals and habits, as they are represented in mainstream culture, are very fragile things.**
@@ -77,7 +71,6 @@ Here are seven modes that I think capture a good chunk of my own day to day stat
 
 Being a Hydra is all about the **long term
 **The 1st day of every month is your chance to re-start, revise, and recommit to the things that are most important to you.
-> Embedded: bookmark
 > **But I always want it to be a project that, if successful, will make the rest of my career look like a footnote.
 **One of the notable aspects of compound growth is that the **furthest out years are the most important
 
@@ -86,13 +79,11 @@ Being a Hydra is all about the **long term
 **Look for **small bets** you can make where you lose 1x if you’re wrong but make 100x if it works. Then make a bigger bet in that direction.
 
 You can get to about the 90th percentile in your field by working either **smart** or **hard**, which is still a great accomplishment. But getting to the 99th percentile requires **both.**
-> Embedded: bookmark
 > Unless you learn to **face your fear** you will never achieve anything. Fear of failure, fear of rejection, fear of shame. These are the things that get in between us and our potential.
 
 **Asking for help** is a form of vulnerability. That's why people tend not to do it, they're afraid of displaying a lack of strength. But really, vulnerability is an incredible strength.
 
 **Happiness conditional on external factors will always be unobtainable**. The same thing goes for validation and safety. Money will not make you feel safe; nothing will. There is no safety in the face of your own mortality.
-> Embedded: bookmark
 > To get what you want, **deserve what you want**. Trust, success, and admiration are earned.
 
 Learn to think through problems [backwards](https://www.farnamstreetblog.com/2014/07/charlie-munger-thinking-backward-forward/) as well as forward.

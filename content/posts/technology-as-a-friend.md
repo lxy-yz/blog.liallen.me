@@ -7,9 +7,7 @@ updated: 1725606120000
 description: ""
 tags: ["Technology"]
 ---
-
-> Disclaimer
-> Like any other personal advice, rules work for me may not work for others. Examine them* critically.*
+(Disclaimer: like any other personal advice, rules work for me may not work for others. Examine them* critically*.)
 
 Hey there! I'd love to share some general rules that have helped me become friends with technology, so I don't have to constantly fight against it.
 
@@ -23,18 +21,20 @@ Next time we feel reluctant to change, instead of letting frustration cloud our 
 ## Don’t start from blank canvas
 There’s something called the Blank Canvas Syndrome. Why it’s hard to write, to paint, or basically to engage with any creative endeavor? Because creativity is a difficult pursuit. More specifically, it’s a process that needs preparation and practice. Famous artists are known to the public by their masterpiece of art, but what remains relatively unseen is their [creative process](https://jamesclear.com/creative-thinking)  and craft they use to create them. Nothing comes out of thin air, without the process there’s no art.
 
-There is also a caveat about practice. Don’t conflate it with the amount of time you spent on a subject. 10,000 hours doesn’t guarantee any mastery because [competence and experience isn’t the same thing](https://twitter.com/sama/status/1607796235603447808?lang=en). Exam-oriented education, 996 working hour system are all good examples. **Practice isn’t repetition but **[**iterations**](/8a124755051442afbf4334e4bd00f982?pvs=25).
+There is also a caveat about practice. Don’t conflate it with the amount of time you spent on a subject. 10,000 hours doesn’t guarantee any mastery because [competence and experience isn’t the same thing](https://twitter.com/sama/status/1607796235603447808?lang=en). Exam-oriented education, 996 working hour system are all good examples. Practice isn’t repetition but iterations.
 
 Get into the habit of showing up and overcome the fear and embarrassment of imitations. [We’re imperfect mirrors](https://sive.rs/mirror). There’re a lot of (much more than you’ll need) high quality open source template, library and tools that can help get you pretty far. **Don’t reinvent the wheel when unnecessary**.
 ## Focus and prioritize
 > I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times. - Bruce Lee
-[Pick the right thing to work on and be ruthless in saying no to everything else](https://blog.samaltman.com/productivity). Whether it's achieving product-market fit for startups, identifying the North Star metric for product growth, or simply getting things done on the job, we must avoid spreading ourselves too thin. A fear of missing out coupled with our bias towards novelty will ultimately hurt our productivity.
+
+Pick the right thing to work on and be ruthless in saying no to everything else](https://blog.samaltman.com/productivity). Whether it's achieving product-market fit for startups, identifying the North Star metric for product growth, or simply getting things done on the job, we must avoid spreading ourselves too thin. A fear of missing out coupled with our bias towards novelty will ultimately hurt our productivity.
 
 We’re living in an age of distractions, thanks to the abundance of societal wealth and the thriving attention economy. **Be cautious about distractions disguised as options**. Every moment we  indulge in those distractions comes at the expense of not doing the most important thing we could be doing. [Don’t lose time and money by doing ](http://paulgraham.com/selfindulgence.html)[**fake work**](http://paulgraham.com/selfindulgence.html).
 
 While technologies and our personal preferences are important, they are merely vehicles to an end - creating something that people want. It is important to cultivate a habit of asking ourselves what problems we are working on and why we are solving them. At no point should we allow the solution to outweigh the problem.
 ## [Invest in things that don’t change](https://world.hey.com/dhh/invest-in-things-that-don-t-change-6f7f19e1)
 > It is important to view knowledge as sort of a semantic tree — make sure you understand the fundamental principles, ie the trunk and big branches, before you get into the leaves/details or there is nothing for them to hang on to. - [https://fs.blog/elon-musk-knowledge/](https://fs.blog/elon-musk-knowledge/)
+
 [Choose boring technologies](https://mcfunley.com/choose-boring-technology) and learn to use time as an effective filter for stuff that is worth investment. There will always be newer and shinier technology race for our attention, and it’s our natural tendency to follow them. But most of them aren’t better.
 
 Ground your thinking. Instead of asking “How do I use X?”, “How does X compare to Y?”, asking “What problem is X trying to solve? Is it the same problem I am tackling? Is it good enough or do I need a better solution?” instead.

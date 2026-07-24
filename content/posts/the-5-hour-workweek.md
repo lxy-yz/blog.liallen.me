@@ -33,7 +33,7 @@ What’s next then? Once again, I don’t know, I’m far from what Tim did and 
 
 However, one thing I am certain of is **I earn to live, not vice versa**. While looking around, many people are heads down doing the opposite. They are busy working but not living. They seek to eliminate boredom by killing time with **distractions**. They act as if time, same as money, is renewable.
 
-It’s ironically true that often times in life the best strategy to “win” a game is not playing it at all. Without realizing this, we fall into the trap of rat race. And* it’s the definition of insanity of doing the same thing over and over again while expecting a different result.*
+It’s ironically true that often times in life the best strategy to “win” a game is not playing it at all. Without realizing this, we fall into the trap of rat race. And ** it’s the definition of insanity of doing the same thing over and over again while expecting a different result.**
 
 There’s still a long way to go, and the path ahead becomes more pathless than ever,  but that’s the joy of life to me; to explore and to grow.
 

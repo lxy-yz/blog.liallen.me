@@ -1,7 +1,7 @@
 ---
-id: "38bf2bca-1f85-80a6-b903-cb44ed6e6b28"
-title: "医生 VS 鼓手"
-slug: "yi-sheng-vs-gu-shou"
+id: 38bf2bca-1f85-80a6-b903-cb44ed6e6b28
+title: 医生 vs 鼓手
+slug: yi-sheng-vs-gu-shou
 date: ""
 updated: 1782572400000
 description: ""

@@ -7,7 +7,6 @@ updated: 1778859900000
 description: "The illusion of upgraded lifestyle"
 tags: ["Belief"]
 ---
-
 Here are some upgrades I’ve made since getting a job.
 
 My sleeping mattress increased 10x, from $200 to $2000.

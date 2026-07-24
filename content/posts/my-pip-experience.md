@@ -25,7 +25,7 @@ Most of my suffering came from the same place: I had problems in front of me, an
 As long as I’m honest about reality, I have to admit I was defeated. I was disappointed and angry, but not at the company or the environment. I was angry at my own **incompetence**.
 
 Unlike many people fueled by envy, I’m fueled by anger. The pip experience is painful enough that vividly reminds me of my anger about myself, as well as the fact the need to change things usually boils down to the need to [**change myself**](./xiao-pang-zi-hou-lai-zen-me-yang-le.md).
-That’s where my [**unlearning**](/fe5aa0722fb74f79bf7a60d8a08aba10?pvs=25) journey begins.
+That’s where my **unlearning** journey begins.
 
 However, I can’t be an angry bird all the time. The more I revisit it,  the less it feels like pure misfortune—and the more it feels like a tuition bill I didn’t want to pay, but probably needed to.
 Although I'm still confused about my severance package, did I forget about it, miss it, or …?

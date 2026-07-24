@@ -7,7 +7,6 @@ updated: 1778859900000
 description: "Make luck a remnant of design"
 tags: ["Belief"]
 ---
-
 > In 1,000 parallel universes, you want to be wealthy in 999 of them. You don’t want to be wealthy in the fifty of them where you got lucky, so we want to factor luck out of it. [HOW TO GET LUCKY — Almanack of Naval Ravikant](https://www.navalmanack.com/almanack-of-naval-ravikant/how-to-get-lucky)
 
 Many people drift through life without a _definite_ purpose.

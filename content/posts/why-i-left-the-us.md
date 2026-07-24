@@ -1,11 +1,12 @@
 ---
-id: "7833376a-2df2-4d2e-a876-f8f0164e2a88"
-title: "Why I left the US"
-slug: "why-i-left-the-us"
-date: "2023-12-20"
+id: 7833376a-2df2-4d2e-a876-f8f0164e2a88
+title: Why I left the US
+slug: why-i-left-the-us
+date: 2023-12-20
 updated: 1783952280000
 description: "Caveat: not personal advice"
-tags: ["Decision Making", "Introduction"]
+tags:
+  - Introduction
 ---
 
 There’re numerous factors I’ve considered when making the decision, to name a few:

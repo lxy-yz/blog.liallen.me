@@ -7,7 +7,6 @@ updated: 1778907120000
 description: ""
 tags: ["Review"]
 ---
-
 It’s fun to kickstart a brand new year this way because I’ve never done any annual review before, and as an awkward beginner, it literally took me weeks to reconnect on what has happened last year (a perfect reason to do this review).
 
 ## Awakening
